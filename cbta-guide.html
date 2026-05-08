@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Kaya Driving School Blog — Your ultimate resource for driving tips, safety guides, and Canberra licensing news."/>
-  <meta name="keywords" content="driving blog Canberra, driving tips ACT, learn to drive blog"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://kayadrivingschool.com.au/blog"/>
-  <title>Blog & Driving Guides | Kaya Driving School Canberra</title>
+  <meta name="description" content="The Ultimate Guide to the CBTA Training Pathway in Canberra. Learn how to get your P licence with Kaya Driving School."/>
+  <title>CBTA Training Pathway Guide | Kaya Driving School Canberra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -16,9 +13,37 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <link rel="stylesheet" href="styles.css"/>
   <style>
-    .blog-page-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-    @media (max-width: 900px) { .blog-page-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 580px) { .blog-page-grid { grid-template-columns: 1fr; } }
+    .blog-post-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .blog-post-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 3rem;
+    }
+    .blog-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .blog-content h3 {
+      color: var(--yellow-dark);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .blog-content p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .blog-steps-detailed {
+      background: var(--bg-alt);
+      padding: 2rem;
+      border-radius: var(--radius);
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -54,78 +79,44 @@
 
   <section class="page-hero">
     <div class="container">
-      <span class="section-tag gsap-reveal-up">Driving Resource</span>
-      <h1 class="gsap-reveal-up">Blog & <span class="text-yellow">Insights</span></h1>
-      <p class="gsap-reveal-up">Expert advice on road safety, test preparation, and mastering your driving skills in Canberra.</p>
-      <div class="breadcrumb gsap-reveal-up">
-        <a href="index.html">Home</a> <span>›</span> <span>Blog</span>
+      <div class="breadcrumb gsap-reveal-up" style="justify-content: center; margin-bottom: 1rem;">
+        <a href="index.html">Home</a> <span>›</span> <a href="blog.html">Blog</a> <span>›</span> <span>CBTA Guide</span>
       </div>
+      <span class="section-tag gsap-reveal-up">Driving Guide</span>
+      <h1 class="gsap-reveal-up" style="max-width: 800px; margin: 0 auto;">The Ultimate Guide to the <span class="text-yellow">CBTA</span> Training Pathway</h1>
+      <p class="gsap-reveal-up">Understand the Competency Based Training and Assessment process in the ACT.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="blog-page-grid">
-        <!-- Post 0: CBTA Guide -->
-        <article class="blog-card gsap-reveal-card">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop" alt="CBTA Training Pathway" loading="lazy"/>
-            <div class="blog-date">May 15, 2024</div>
-          </div>
-          <div class="blog-body">
-            <h3>The Ultimate Guide to the CBTA Training Pathway</h3>
-            <p>Understand the Competency Based Training and Assessment (CBTA) process in the ACT to get your P licence smoothly.</p>
-            <a href="cbta-guide.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
-          </div>
-        </article>
-        <!-- Post 1 -->
-        <article class="blog-card gsap-reveal-card" style="transition-delay:0.1s">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Test Day Tips" loading="lazy"/>
-            <div class="blog-date">May 10, 2024</div>
-          </div>
-          <div class="blog-body">
-            <h3>5 Essential Tips for First-Time Driving Test</h3>
-            <p>Mastering your nerves and knowing what to expect is half the battle. Discover our top tips for passing your Canberra driving test.</p>
-            <a href="tips-first-test.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
-          </div>
-        </article>
-        <!-- Post 2 -->
-        <article class="blog-card gsap-reveal-card" style="transition-delay:0.2s">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800&auto=format&fit=crop" alt="Manual vs Auto" loading="lazy"/>
-            <div class="blog-date">May 08, 2024</div>
-          </div>
-          <div class="blog-body">
-            <h3>Manual vs. Automatic: Which is Right for You?</h3>
-            <p>We weigh up the pros and cons of both transmissions to help you decide which licence type fits your future driving needs.</p>
-            <a href="manual-vs-auto.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
-          </div>
-        </article>
-        <!-- Post 3 -->
-        <article class="blog-card gsap-reveal-card" style="transition-delay:0.3s">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop" alt="Night Driving" loading="lazy"/>
-            <div class="blog-date">May 05, 2024</div>
-          </div>
-          <div class="blog-body">
-            <h3>Navigating Night Driving in Canberra</h3>
-            <p>Night driving presents unique challenges. Learn how to stay safe and confident when the sun goes down on ACT roads.</p>
-            <a href="night-driving-canberra.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
-          </div>
-        </article>
-        <!-- Post 4 -->
-        <article class="blog-card gsap-reveal-card" style="transition-delay:0.4s">
-          <div class="blog-img">
-            <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop" alt="Roundabouts" loading="lazy"/>
-            <div class="blog-date">Apr 28, 2024</div>
-          </div>
-          <div class="blog-body">
-            <h3>Mastering Roundabouts: A Canberra Specialty</h3>
-            <p>Canberra is famous for its roundabouts. We break down the rules and techniques for navigating them flawlessly.</p>
-            <a href="mastering-roundabouts.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
-          </div>
-        </article>
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=1200&auto=format&fit=crop" alt="CBTA Guide" class="blog-post-img gsap-reveal-up" loading="lazy"/>
+      
+      <div class="blog-content gsap-reveal-up">
+        <h2>What is CBTA?</h2>
+        <p>The Competency Based Training and Assessment (CBTA) is an alternative to the standard one-off driving test in the Australian Capital Territory (ACT). It allows learner drivers to progressively build their driving skills and demonstrate competency over a series of lessons with an accredited driving instructor.</p>
+        
+        <p>At Kaya Driving School, our SDERA certified instructors will guide you through the CBTA logbook system. Rather than feeling the pressure of a single driving test, the CBTA method ensures a relaxed, continuous learning environment where you're assessed dynamically as you learn.</p>
+
+        <div class="blog-steps-detailed">
+          <h2>4 Steps to Your P Licence via CBTA</h2>
+          
+          <h3>Step 1: Check your eligibility</h3>
+          <p>Ensure you have held your ACT learner licence for at least six months if you are under 25, or three months if you are 25 or older.</p>
+          
+          <h3>Step 2: Complete the required training</h3>
+          <p>Participate in the CBTA program with an accredited KAYA Driving School instructor. This involves demonstrating competency in a variety of driving tasks over multiple lessons.</p>
+          
+          <h3>Step 3: Logbook sign-off</h3>
+          <p>Once all competencies are achieved, your instructor will sign off your logbook, confirming you are ready for your P licence.</p>
+          
+          <h3>Step 4: Visit Access Canberra</h3>
+          <p>Take your completed logbook to an Access Canberra service centre to be issued your provisional driver licence.</p>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Ready to Start Your CBTA Journey?</h2>
+        <p>Book your lessons with Kaya Driving School today and let our expert instructors guide you smoothly towards achieving your P licence.</p>
+        <a href="contact.html#booking" class="btn btn-primary" style="margin-top: 1rem;">Book a CBTA Lesson</a>
       </div>
     </div>
   </section>

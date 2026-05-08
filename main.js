@@ -11,6 +11,57 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
+  // ── Custom Cursor ──────────────────────────────
+  const cursorDot = document.createElement('div');
+  cursorDot.classList.add('cursor-dot');
+  document.body.appendChild(cursorDot);
+
+  const cursorOutline = document.createElement('div');
+  cursorOutline.classList.add('cursor-outline');
+  document.body.appendChild(cursorOutline);
+
+  let mouseX = 0, mouseY = 0;
+  let outlineX = 0, outlineY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    // Dot follows instantly
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
+  });
+
+  // Outline follows with slight delay using requestAnimationFrame
+  function animateCursor() {
+    let distX = mouseX - outlineX;
+    let distY = mouseY - outlineY;
+    
+    outlineX = outlineX + (distX * 0.15);
+    outlineY = outlineY + (distY * 0.15);
+    
+    cursorOutline.style.left = `${outlineX}px`;
+    cursorOutline.style.top = `${outlineY}px`;
+    
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  // Hover effects on links/buttons/interactive elements
+  const hoverElements = document.querySelectorAll('a, button, .btn, .faq-question');
+  hoverElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorOutline.style.width = '60px';
+      cursorOutline.style.height = '60px';
+      cursorOutline.style.backgroundColor = 'rgba(250, 204, 21, 0.1)';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorOutline.style.width = '40px';
+      cursorOutline.style.height = '40px';
+      cursorOutline.style.backgroundColor = 'transparent';
+    });
+  });
+
   // ── Footer Year ────────────────────────────────
   const yearEl = document.getElementById('footerYear');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -315,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(update);
   }
 
-  const statNumbers = document.querySelectorAll('.stat-number, .fb-number');
+  const statNumbers = document.querySelectorAll('.stat-number, .fb-number, .yellow-stat-number');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -326,5 +377,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
 
   statNumbers.forEach(el => counterObserver.observe(el));
+
+  // ── Progress Bar Animation ─────────────────────
+  const progressBars = document.querySelectorAll('.progress-bar-fill');
+  const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute('data-width');
+        if (width) {
+          entry.target.style.width = width;
+        }
+        progressObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  progressBars.forEach(el => progressObserver.observe(el));
+
+  // ── FAQ Accordion ──────────────────────────────
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (question) {
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        // Close all
+        faqItems.forEach(faq => faq.classList.remove('active'));
+        // Open clicked if it wasn't already active
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    }
+  });
 
 });

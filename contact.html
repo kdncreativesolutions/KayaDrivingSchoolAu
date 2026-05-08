@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Contact Kaya Driving School in Canberra. Book a lesson, ask a question, or get a free consultation. Phone, email, or online booking available."/>
-  <meta name="keywords" content="contact Kaya Driving School, book driving lesson Canberra, driving school phone number ACT"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://kayadrivingschool.com.au/contact"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact Kaya Driving School in Canberra. Book a lesson, ask a question, or get a free consultation. Phone, email, or online booking available." />
+  <meta name="keywords"
+    content="contact Kaya Driving School, book driving lesson Canberra, driving school phone number ACT" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://kayadrivingschool.com.au/contact" />
   <title>Contact & Book a Lesson | Kaya Driving School Canberra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
-    .contact-info-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
     .contact-info-card {
       background: white;
       border-radius: var(--radius);
@@ -29,18 +45,44 @@
       align-items: flex-start;
       transition: all var(--transition);
     }
-    .contact-info-card:hover { box-shadow: var(--shadow-md); border-color: var(--yellow); transform: translateX(4px); }
+
+    .contact-info-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--yellow);
+      transform: translateX(4px);
+    }
+
     .cci-icon {
-      width: 52px; height: 52px;
+      width: 52px;
+      height: 52px;
       background: var(--yellow-muted);
       border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
-    .cci-icon svg { width: 22px; color: var(--yellow-dark); }
-    .cci-text h4 { margin-bottom: 0.25rem; font-size: 1rem; }
-    .cci-text p, .cci-text a { color: var(--text-body); font-size: 0.9rem; margin: 0; }
-    .cci-text a:hover { color: var(--yellow-dark); }
+
+    .cci-icon svg {
+      width: 22px;
+      color: var(--yellow-dark);
+    }
+
+    .cci-text h4 {
+      margin-bottom: 0.25rem;
+      font-size: 1rem;
+    }
+
+    .cci-text p,
+    .cci-text a {
+      color: var(--text-body);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .cci-text a:hover {
+      color: var(--yellow-dark);
+    }
 
     .booking-form {
       background: white;
@@ -50,8 +92,16 @@
       border: 1px solid var(--border);
     }
 
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .form-group { margin-bottom: 1.5rem; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
     .form-group label {
       display: block;
       font-weight: 600;
@@ -59,6 +109,7 @@
       margin-bottom: 0.5rem;
       color: var(--text-heading);
     }
+
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -73,6 +124,7 @@
       outline: none;
       transition: border-color var(--transition), box-shadow var(--transition);
     }
+
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
@@ -80,7 +132,24 @@
       box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.15);
       background: white;
     }
-    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-group input.invalid,
+    .form-group select.invalid {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    }
+
+    .error-msg {
+      color: #ef4444;
+      font-size: 0.8rem;
+      margin-top: 0.35rem;
+      display: none;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
 
     .form-success {
       display: none;
@@ -94,28 +163,46 @@
       margin-bottom: 1.5rem;
     }
 
-    .map-section { background: var(--bg-alt); }
+    .map-section {
+      background: var(--bg-alt);
+    }
+
     .map-wrapper {
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow-md);
       height: 420px;
     }
-    .map-wrapper iframe { width: 100%; height: 100%; border: none; }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     @media (max-width: 900px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .booking-form { padding: 2rem; }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-form {
+        padding: 2rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <header class="header scrolled" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
-        <span class="logo-text-fallback">Kaya <span class="logo-accent">Driving</span></span>
+        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+        <span class="logo-text-fallback">KAYA <span class="logo-accent">Driving School</span></span>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav-list">
@@ -127,7 +214,8 @@
         </ul>
       </nav>
       <a href="#booking" class="btn btn-primary header-cta">Book a Lesson</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-nav" id="mobile-nav">
       <ul>
@@ -136,7 +224,8 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#booking" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center">Book a Lesson</a></li>
+        <li><a href="#booking" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center">Book a
+            Lesson</a></li>
       </ul>
     </div>
   </header>
@@ -145,7 +234,8 @@
     <div class="container">
       <span class="section-tag gsap-reveal-up">Get In Touch</span>
       <h1 class="gsap-reveal-up">Contact <span class="text-yellow">Kaya</span> Driving School</h1>
-      <p class="gsap-reveal-up">Have a question or ready to book? We'd love to hear from you. Our friendly team is available 7 days a week.</p>
+      <p class="gsap-reveal-up">Have a question or ready to book? We'd love to hear from you. Our friendly team is
+        available 7 days a week.</p>
       <div class="breadcrumb gsap-reveal-up">
         <a href="index.html">Home</a> <span>›</span> <span>Contact</span>
       </div>
@@ -157,14 +247,16 @@
       <div class="contact-grid">
         <!-- Info Cards -->
         <div class="contact-info-cards">
-          <h2 class="gsap-reveal-up" style="margin-bottom:0.5rem">Let's Get You <span class="text-yellow">Behind the Wheel</span></h2>
-          <p class="gsap-reveal-up" style="margin-bottom:2rem">Fill out the booking form or reach us directly through any of the channels below. We respond within 2 hours during business hours.</p>
+          <h2 class="gsap-reveal-up" style="margin-bottom:0.5rem">Let's Get You <span class="text-yellow">Behind the
+              Wheel</span></h2>
+          <p class="gsap-reveal-up" style="margin-bottom:2rem">Fill out the booking form or reach us directly through
+            any of the channels below. We respond within 2 hours during business hours.</p>
 
           <div class="contact-info-card gsap-reveal-card">
             <div class="cci-icon"><i data-lucide="phone"></i></div>
             <div class="cci-text">
               <h4>Phone</h4>
-              <a href="tel:0212345678">(02) 1234 5678</a>
+              <a href="tel:+61489228702">+61 489 228 702</a>
               <p>Monday – Sunday, 6:00 AM – 8:00 PM</p>
             </div>
           </div>
@@ -187,14 +279,14 @@
             <div class="cci-icon"><i data-lucide="clock"></i></div>
             <div class="cci-text">
               <h4>Operating Hours</h4>
-              <p>Monday – Sunday: 6:00 AM – 8:00 PM<br/>Public Holidays: 7:00 AM – 6:00 PM</p>
+              <p>Monday – Sunday: 6:00 AM – 8:00 PM<br />Public Holidays: 7:00 AM – 6:00 PM</p>
             </div>
           </div>
           <div class="contact-info-card gsap-reveal-card" style="transition-delay:0.4s">
             <div class="cci-icon"><i data-lucide="message-circle"></i></div>
             <div class="cci-text">
               <h4>WhatsApp</h4>
-              <a href="https://wa.me/61212345678" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              <a href="https://wa.me/61489228702" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
               <p>Quick responses during lesson hours</p>
             </div>
           </div>
@@ -203,7 +295,8 @@
         <!-- Booking Form -->
         <div class="booking-form gsap-reveal-right" id="bookingForm">
           <h3 style="margin-bottom:0.5rem">Book Your Lesson</h3>
-          <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.9rem">Fill out the form below and we'll confirm your booking within 2 hours.</p>
+          <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.9rem">Fill out the form below and we'll
+            confirm your booking within 2 hours.</p>
 
           <div class="form-success" id="formSuccess">
             <i data-lucide="check-circle-2" style="margin-right:8px"></i>
@@ -214,22 +307,28 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="e.g. John" required/>
+                <input type="text" id="firstName" name="firstName" placeholder="e.g. John" required minlength="2" />
+                <div class="error-msg">Please enter a valid first name (min 2 characters).</div>
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="e.g. Smith" required/>
+                <input type="text" id="lastName" name="lastName" placeholder="e.g. Smith" required minlength="2" />
+                <div class="error-msg">Please enter a valid last name (min 2 characters).</div>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required/>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" />
+                <div class="error-msg">Please enter a valid email address.</div>
               </div>
               <div class="form-group">
                 <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX" required/>
+                <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX" required
+                  pattern="^(?:\+?61|0)[2-478](?:[ -]?[0-9]){8}$" />
+                <div class="error-msg">Please enter a valid Australian phone number.</div>
               </div>
             </div>
 
@@ -237,21 +336,24 @@
               <label for="course">Course Interested In *</label>
               <select id="course" name="course" required>
                 <option value="">Select a course...</option>
-                <option>Beginner Lessons (Automatic)</option>
-                <option>Beginner Lessons (Manual)</option>
-                <option>Automatic Driving</option>
-                <option>Manual Driving</option>
-                <option>Test Preparation</option>
-                <option>Refresher Course</option>
-                <option>10-Lesson Package</option>
-                <option>Advanced Highway</option>
+                <option>Driving Lessons in Canberra ACT (Automatic)</option>
+                <option>Driving Test Preparation Canberra ACT</option>
+                <option>Overseas Licence Conversion ACT</option>
+                <option>Refresher Driving Lessons Canberra</option>
+                <option>Learner Driver Training ACT</option>
+                <option>Logbook Driving Training Canberra</option>
+                <option>Automatic Driving Lessons (Dual Control Car)</option>
+                <option>Private Driving Lessons Canberra</option>
+                <option>Weekend Driving Lessons ACT</option>
+                <option>Driving Lesson Packages Canberra</option>
               </select>
+              <div class="error-msg">Please select a course.</div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="preferredDate">Preferred Start Date</label>
-                <input type="date" id="preferredDate" name="preferredDate"/>
+                <input type="date" id="preferredDate" name="preferredDate" />
               </div>
               <div class="form-group">
                 <label for="preferredTime">Preferred Time</label>
@@ -267,7 +369,7 @@
 
             <div class="form-group">
               <label for="suburb">Your Suburb (for pickup)</label>
-              <input type="text" id="suburb" name="suburb" placeholder="e.g. Belconnen, Gungahlin, Woden..."/>
+              <input type="text" id="suburb" name="suburb" placeholder="e.g. Belconnen, Gungahlin, Woden..." />
             </div>
 
             <div class="form-group">
@@ -290,17 +392,17 @@
       <div class="section-header" style="margin-bottom:2rem">
         <span class="section-tag gsap-reveal-up">Service Area</span>
         <h2 class="gsap-reveal-up">We Serve All of <span class="text-yellow">Canberra</span></h2>
-        <p class="gsap-reveal-up">From Gungahlin in the north to Tuggeranong in the south, we pick you up from your home or workplace.</p>
+        <p class="gsap-reveal-up">From Gungahlin in the north to Tuggeranong in the south, we pick you up from your home
+          or workplace.</p>
       </div>
       <div class="map-wrapper gsap-reveal-up">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104453.05043831261!2d148.99982479619977!3d-35.28345789694748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d69b05c9021%3A0x500ea6ea7695660!2sCanberra%20ACT!5e0!3m2!1sen!2sau!4v1715000000000&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off"
-          title="Kaya Driving School Service Area - Canberra ACT"
-          allowfullscreen=""
-          loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.115852273646!2d149.1245033!3d-35.1663458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b165217983636f7%3A0x868b4467554909a3!2s20%20Phelp%20Ct%2C%20Amaroo%20ACT%202914%2C%20Australia!5e0!3m2!1sen!2sau!4v1715100000000"
+          title="Kaya Driving School Location - Amaroo ACT" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
+
     </div>
   </section>
 
@@ -321,19 +423,68 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
-          <a href="index.html" class="logo footer-logo"><img src="assets/logo.png" alt="" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/><span class="logo-text-fallback" style="display:none;color:white">Kaya <span class="logo-accent">Driving</span></span></a>
-          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and skilled driver.</p>
+          <a href="index.html" class="logo footer-logo"><img src="assets/logo.png" alt="" class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" /><span
+              class="logo-text-fallback" style="display:none;color:white">KAYA <span class="logo-accent">Driving
+                School</span></span></a>
+          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and
+            skilled driver.</p>
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-            <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-            <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            <a href="https://www.facebook.com/share/1CsbU75MbM/" class="social-link" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/kayadrivingschool?igsh=Ymh5NDc4amoybjkz" class="social-link"
+              aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Courses</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Our Courses</h4><ul><li><a href="services.html#automatic">Automatic Lessons</a></li><li><a href="services.html#manual">Manual Lessons</a></li><li><a href="services.html#test-prep">Test Preparation</a></li><li><a href="services.html#refresher">Refresher Course</a></li></ul></div>
-        <div class="footer-col footer-contact"><h4>Contact Info</h4><div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600, Australia</span></div><div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:0212345678">(02) 1234 5678</a></div><div class="contact-info-item"><i data-lucide="mail"></i><a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a></div><div class="contact-info-item"><i data-lucide="clock"></i><span>Mon–Sun: 6:00 AM – 8:00 PM</span></div></div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Courses</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Courses</h4>
+          <ul>
+            <li><a href="services.html#automatic">Automatic Lessons</a></li>
+            <li><a href="services.html#manual">Manual Lessons</a></li>
+            <li><a href="services.html#test-prep">Test Preparation</a></li>
+            <li><a href="services.html#refresher">Refresher Course</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact Info</h4>
+          <div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600, Australia</span></div>
+          <div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:+61489228702">+61 489 228 702</a></div>
+          <div class="contact-info-item"><i data-lucide="mail"></i><a
+              href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a></div>
+          <div class="contact-info-item"><i data-lucide="clock"></i><span>Mon–Sun: 6:00 AM – 8:00 PM</span></div>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p></div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved. &nbsp;|&nbsp; <a
+            href="#">Privacy Policy</a></p>
+      </div>
     </div>
   </footer>
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i data-lucide="chevron-up"></i></button>
@@ -341,12 +492,21 @@
   <script>
     // ── FAQ Accordion ───────────────────────────────
     const faqs = [
-      { q: "How do I book a lesson?", a: "Simply fill out the booking form above, call us on (02) 1234 5678, or send us a WhatsApp message. We'll confirm your booking within 2 hours during business hours." },
-      { q: "Do you offer door-to-door pickup?", a: "Yes! We offer door-to-door pickup and drop-off service across all Canberra suburbs including Belconnen, Gungahlin, Woden, Tuggeranong, City, and Queanbeyan." },
-      { q: "What car will I learn in?", a: "We use modern, late-model dual-control vehicles that are safe, comfortable and fitted with all the latest safety technology. We have both automatic and manual vehicles." },
-      { q: "How long does it take to get a licence?", a: "This varies from person to person. On average, most students need between 15–30 hours of professional lessons in conjunction with their log book hours. Our instructors will give you a personalised timeline." },
-      { q: "Can I choose my instructor?", a: "Yes! When booking, you can request a specific instructor. While we do our best to accommodate, availability may vary. All our instructors are equally qualified and fantastic." },
-      { q: "What is your cancellation policy?", a: "We require at least 24 hours notice for cancellations to avoid a cancellation fee. Life happens — if something urgent comes up, just let us know as soon as possible." },
+      { q: "1. How do I book driving lessons with KAYA Driving School?", a: "You can book your driving lessons by calling us, sending an email, or using the booking form on our website. We offer flexible lesson times including weekdays, evenings, and weekends." },
+      { q: "2. Do you provide driving lessons in Canberra and surrounding ACT areas?", a: "Yes. We provide professional driving lessons across Canberra and nearby ACT suburbs including Belconnen, Gungahlin, Woden, Tuggeranong, Weston Creek, and Queanbeyan." },
+      { q: "3. Can beginners start lessons with no driving experience?", a: "Absolutely. Our instructors are experienced in teaching complete beginners and helping nervous learners build confidence safely from day one." },
+      { q: "4. What type of vehicles are used for training?", a: "We use modern dual-control automatic vehicles that are safe, comfortable, and ideal for learner drivers preparing for the ACT driving test." },
+      { q: "5. Do you help students prepare for the ACT driving test?", a: "Yes. Our lessons are designed to help learners understand ACT road rules, safe driving habits, parking techniques, roundabouts, lane changes, and everything required to pass the ACT driving assessment confidently." },
+      { q: "6. Can I use your car for the driving test?", a: "Yes. Students can use our instructor vehicle for their ACT driving test, subject to availability and eligibility." },
+      { q: "7. How many driving lessons will I need before taking the test?", a: "The number of lessons depends on your experience, confidence, and learning speed. Some learners require only a few lessons, while beginners may need a structured learning plan over several weeks." },
+      { q: "8. Are your driving instructors accredited in the ACT?", a: "Yes. All our instructors are fully qualified, professional, and accredited to provide driving instruction in the Australian Capital Territory (ACT)." },
+      { q: "9. What should I bring to my first driving lesson?", a: "Please bring your valid learner licence (Learner Permit) and wear comfortable footwear suitable for driving." },
+      { q: "10. Do you teach defensive driving techniques?", a: "Yes. We focus strongly on defensive driving, hazard awareness, safe decision-making, and real-world driving skills to help students become safe and responsible drivers." },
+      { q: "11. What are the speed limits learners should know in Canberra?", a: "Speed limits vary depending on the road and area. Common limits include 40 km/h in school zones, 50 km/h on suburban roads, and 60-100 km/h on major roads. Our instructors ensure you fully understand these." },
+      { q: "12. Are mobile phones allowed while driving in ACT?", a: "No. Learner and provisional drivers in the ACT must not use mobile phones while driving, including hands-free functions. Strict penalties apply for distracted driving." },
+      { q: "13. Do you offer refresher driving lessons?", a: "Yes. We provide refresher lessons for overseas licence holders, nervous drivers, seniors, and anyone wanting to improve confidence or update their driving skills." },
+      { q: "14. What are the most common mistakes during the ACT driving test?", a: "Common mistakes include not checking mirrors regularly, incorrect indication, poor observation at roundabouts, speed control issues, unsafe lane changes, and rolling stops at stop signs." },
+      { q: "15. Why choose KAYA Driving School?", a: "Friendly and patient instructors, flexible schedules, modern vehicles, focus on safe driving habits, and professional ACT test preparation." },
     ];
 
     const faqContainer = document.getElementById('faqContainer');
@@ -390,18 +550,96 @@
     const form = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     if (form) {
+      // Real-time validation removal
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          if (input.classList.contains('invalid')) {
+            if (input.checkValidity()) {
+              input.classList.remove('invalid');
+              const errorMsg = input.nextElementSibling;
+              if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.style.display = 'none';
+              }
+            }
+          }
+        });
+      });
+
       form.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        let isValid = true;
+        inputs.forEach(input => {
+          if (input.hasAttribute('required') || input.value !== '') {
+            if (!input.checkValidity()) {
+              isValid = false;
+              input.classList.add('invalid');
+              const errorMsg = input.nextElementSibling;
+              if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.style.display = 'block';
+              }
+            } else {
+              input.classList.remove('invalid');
+              const errorMsg = input.nextElementSibling;
+              if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.style.display = 'none';
+              }
+            }
+          }
+        });
+
+        if (!isValid) {
+          // Scroll to first error
+          const firstError = form.querySelector('.invalid');
+          if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
         // In production this would POST to a server
         if (formSuccess) {
           formSuccess.style.display = 'block';
           form.reset();
+          inputs.forEach(input => {
+            input.classList.remove('invalid');
+            const errorMsg = input.nextElementSibling;
+            if (errorMsg && errorMsg.classList.contains('error-msg')) errorMsg.style.display = 'none';
+          });
           formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
           if (window.lucide) lucide.createIcons();
         }
       });
     }
+
+    // ── Pre-select course from URL ?service= param ────────────────
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const courseSelect = document.getElementById('course');
+      if (courseSelect) {
+        const decoded = decodeURIComponent(serviceParam.replace(/\+/g, ' '));
+        const options = Array.from(courseSelect.options);
+        const match = options.find(opt => opt.text.trim() === decoded.trim());
+        if (match) {
+          match.selected = true;
+          // Trigger yellow focus to show it's set
+          courseSelect.style.borderColor = 'var(--yellow)';
+          setTimeout(() => { courseSelect.style.borderColor = ''; }, 2000);
+        }
+      }
+    }
   </script>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/61489228702" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+    </svg>
+  </a>
+
   <script src="main.js"></script>
 </body>
+
 </html>
