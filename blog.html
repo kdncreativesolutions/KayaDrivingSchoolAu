@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kaya Driving School Blog — Your ultimate resource for driving tips, safety guides, and Canberra licensing news."/>
+  <meta name="keywords" content="driving blog Canberra, driving tips ACT, learn to drive blog"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://kayadrivingschool.com.au/blog"/>
+  <title>Blog & Driving Guides | Kaya Driving School Canberra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .blog-page-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    @media (max-width: 900px) { .blog-page-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .blog-page-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <span class="logo-text-fallback">Kaya <span class="logo-accent">Driving</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html#booking" class="btn btn-primary header-cta">Book a Lesson</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#booking" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center">Book a Lesson</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag gsap-reveal-up">Driving Resource</span>
+      <h1 class="gsap-reveal-up">Blog & <span class="text-yellow">Insights</span></h1>
+      <p class="gsap-reveal-up">Expert advice on road safety, test preparation, and mastering your driving skills in Canberra.</p>
+      <div class="breadcrumb gsap-reveal-up">
+        <a href="index.html">Home</a> <span>›</span> <span>Blog</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-page-grid">
+        <!-- Post 1 -->
+        <article class="blog-card gsap-reveal-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Test Day Tips" loading="lazy"/>
+            <div class="blog-date">May 10, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>5 Essential Tips for First-Time Driving Test</h3>
+            <p>Mastering your nerves and knowing what to expect is half the battle. Discover our top tips for passing your Canberra driving test.</p>
+            <a href="#" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+        <!-- Post 2 -->
+        <article class="blog-card gsap-reveal-card" style="transition-delay:0.1s">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800&auto=format&fit=crop" alt="Manual vs Auto" loading="lazy"/>
+            <div class="blog-date">May 08, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>Manual vs. Automatic: Which is Right for You?</h3>
+            <p>We weigh up the pros and cons of both transmissions to help you decide which licence type fits your future driving needs.</p>
+            <a href="#" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+        <!-- Post 3 -->
+        <article class="blog-card gsap-reveal-card" style="transition-delay:0.2s">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop" alt="Night Driving" loading="lazy"/>
+            <div class="blog-date">May 05, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>Navigating Night Driving in Canberra</h3>
+            <p>Night driving presents unique challenges. Learn how to stay safe and confident when the sun goes down on ACT roads.</p>
+            <a href="#" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+        <!-- Post 4 -->
+        <article class="blog-card gsap-reveal-card" style="transition-delay:0.3s">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?q=80&w=800&auto=format&fit=crop" alt="Roundabouts" loading="lazy"/>
+            <div class="blog-date">Apr 28, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>Mastering Roundabouts: A Canberra Specialty</h3>
+            <p>Canberra is famous for its roundabouts. We break down the rules and techniques for navigating them flawlessly.</p>
+            <a href="#" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo footer-logo"><img src="assets/logo.png" alt="" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/><span class="logo-text-fallback" style="display:none;color:white">Kaya <span class="logo-accent">Driving</span></span></a>
+          <p>Premier driving lessons in Canberra, ACT.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Our Courses</h4><ul><li><a href="services.html#automatic">Automatic Lessons</a></li><li><a href="services.html#manual">Manual Lessons</a></li><li><a href="services.html#test-prep">Test Preparation</a></li><li><a href="services.html#refresher">Refresher Course</a></li></ul></div>
+        <div class="footer-col footer-contact"><h4>Contact Info</h4><div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600</span></div><div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:0212345678">(02) 1234 5678</a></div><div class="contact-info-item"><i data-lucide="mail"></i><a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i data-lucide="chevron-up"></i></button>
+  <script src="main.js"></script>
+</body>
+</html>

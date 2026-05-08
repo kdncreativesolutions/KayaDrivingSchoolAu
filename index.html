@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kaya Driving School — Premier driving lessons in Canberra, Australia. Expert instructors, flexible scheduling, high pass rates. Book your lesson today!"/>
+  <meta name="keywords" content="driving school Canberra, driving lessons ACT, learn to drive Canberra, manual lessons, automatic lessons, Kaya Driving School"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Kaya Driving School | Premium Driving Lessons in Canberra"/>
+  <meta property="og:description" content="Learn to drive with confidence. Expert instructors, dual-control cars, and exceptional pass rates in Canberra, ACT."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://kayadrivingschool.com.au/"/>
+  <title>Kaya Driving School | Premium Driving Lessons in Canberra</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Kaya Driving School Home">
+        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <span class="logo-text-fallback">Kaya <span class="logo-accent">Driving</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="contact.html#booking" class="btn btn-primary header-cta">Book a Lesson</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html#booking" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center">Book a Lesson</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-parallax-bg" id="hero-parallax-bg">
+      <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop" alt="Driving in Canberra" class="hero-bg-img" id="heroBgImg"/>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <!-- Floating Decorative Elements -->
+    <div class="floating-icon fi-1" id="fi1">🚦</div>
+    <div class="floating-icon fi-2" id="fi2">🚘</div>
+    <div class="floating-icon fi-3" id="fi3">⭐</div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge-tag reveal-up">Canberra's #1 Driving School</span>
+        <h1 class="hero-title reveal-up" style="transition-delay: 0.1s">
+          Learn to Drive with <br>
+          <span class="text-yellow">Confidence</span> & Safety
+        </h1>
+        <p class="hero-desc reveal-up" style="transition-delay:0.2s">
+          Professional, patient and tailored driving lessons in Canberra. Our expert instructors help you pass your test on the first attempt with dual-control modern vehicles.
+        </p>
+        <div class="hero-actions reveal-up" style="transition-delay:0.3s">
+          <a href="contact.html#booking" class="btn btn-primary btn-lg" id="heroBookBtn">
+            <i data-lucide="calendar-check"></i> Book Free Trial
+          </a>
+          <a href="about.html" class="btn btn-outline-white btn-lg">
+            <i data-lucide="play-circle"></i> Learn More
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card reveal-up" style="transition-delay:0.4s">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card reveal-up" style="transition-delay:0.5s">
+          <span class="stat-number">2K+</span>
+          <span class="stat-label">Students Passed</span>
+        </div>
+        <div class="stat-card reveal-up" style="transition-delay:0.6s">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Pass Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"><i data-lucide="chevrons-down"></i></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Images -->
+        <div class="about-images-wrapper">
+          <div class="about-img-grid">
+            <div class="about-img-box img-main gsap-reveal-left">
+              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" alt="Student learning to drive in Canberra" loading="lazy"/>
+            </div>
+            <div class="about-img-box img-secondary gsap-reveal-right">
+              <img src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?q=80&w=800&auto=format&fit=crop" alt="Professional driving instructor" loading="lazy"/>
+            </div>
+          </div>
+          <div class="floating-badge gsap-float">
+            <div class="fb-icon"><i data-lucide="award"></i></div>
+            <div class="fb-text">
+              <span class="fb-number">10+</span>
+              <span class="fb-label">Years of Excellence</span>
+            </div>
+          </div>
+          <div class="floating-badge fb-2 gsap-float-delay">
+            <div class="fb-icon"><i data-lucide="star"></i></div>
+            <div class="fb-text">
+              <span class="fb-number">98%</span>
+              <span class="fb-label">Pass Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content">
+          <span class="section-tag gsap-reveal-up">About Us</span>
+          <h2 class="gsap-reveal-up">We Are Canberra's Most <span class="text-yellow">Trusted</span> Driving School</h2>
+          <p class="gsap-reveal-up">
+            At Kaya Driving School, we believe that safe driving is a fundamental life skill. Founded with a passion for road safety, we have helped thousands of Canberra residents gain the confidence and skills they need to drive safely.
+          </p>
+          <p class="gsap-reveal-up">
+            Our fleet of modern, dual-control vehicles and our experienced, RMS-certified instructors ensure every lesson is safe, effective, and enjoyable.
+          </p>
+          <ul class="feature-list gsap-reveal-up">
+            <li><i data-lucide="check-circle-2"></i> Experienced &amp; SDERA Certified Instructors</li>
+            <li><i data-lucide="check-circle-2"></i> Modern Dual-Control Automatic &amp; Manual Cars</li>
+            <li><i data-lucide="check-circle-2"></i> Flexible Scheduling – Weekends &amp; Evenings</li>
+            <li><i data-lucide="check-circle-2"></i> Door-to-Door Pickup across Canberra</li>
+          </ul>
+          <a href="about.html" class="btn btn-primary gsap-reveal-up" style="display:inline-flex;gap:8px;align-items:center">
+            <i data-lucide="arrow-right"></i> Discover More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="section services-section section-alt" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag gsap-reveal-up">Our Courses</span>
+        <h2 class="gsap-reveal-up">Premium Driving Courses<br>Tailored For You</h2>
+        <p class="gsap-reveal-up">Choose from our range of professionally designed driving programs</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card gsap-reveal-card">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop" alt="Beginner Driving Lesson" loading="lazy"/>
+            <div class="service-tag">Beginner</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i data-lucide="graduation-cap"></i></div>
+            <h3>Beginner Lessons</h3>
+            <p>Start from zero with our patient experts. We cover road rules, hazard perception and basic control skills in a calm, non-judgmental environment.</p>
+            <a href="services.html" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal-card" style="transition-delay:0.1s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" alt="Automatic Driving Lesson" loading="lazy"/>
+            <div class="service-tag">Popular</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i data-lucide="car"></i></div>
+            <h3>Automatic Driving</h3>
+            <p>Learn to drive an automatic car with ease. Perfect for city driving and those who want to focus purely on navigating the roads.</p>
+            <a href="services.html#automatic" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal-card" style="transition-delay:0.2s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1492144534652-320e88383e78?q=80&w=800&auto=format&fit=crop" alt="Manual Driving Lesson" loading="lazy"/>
+            <div class="service-tag">Full Control</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i data-lucide="settings"></i></div>
+            <h3>Manual Driving</h3>
+            <p>Master the art of clutch control and gear changes. Our manual lessons give you total command over your vehicle on all road types.</p>
+            <a href="services.html#manual" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal-card" style="transition-delay:0.3s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Driving Test Preparation" loading="lazy"/>
+            <div class="service-tag">Test Ready</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i data-lucide="clipboard-check"></i></div>
+            <h3>Test Preparation</h3>
+            <p>Targeted lessons focused specifically on passing the ACT driving test. Covers common assessor routes, manoeuvres, and test protocols.</p>
+            <a href="services.html#test-prep" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal-card" style="transition-delay:0.4s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="Refresher Driving Course" loading="lazy"/>
+            <div class="service-tag">Confidence</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i data-lucide="rotate-ccw"></i></div>
+            <h3>Refresher Course</h3>
+            <p>Been off the road for a while? Our refresher program quickly rebuilds your confidence and brushes up any rusty driving habits.</p>
+            <a href="services.html#refresher" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card gsap-reveal-card" style="transition-delay:0.5s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Highway Driving" loading="lazy"/>
+            <div class="service-tag">Advanced</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon-wrap"><i data-lucide="zap"></i></div>
+            <h3>Advanced Highway</h3>
+            <p>Tackle freeways, motorways, and high-speed driving with our advanced highway lesson packages. Build ultimate road confidence.</p>
+            <a href="services.html" class="service-link">Learn More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:3rem">
+        <a href="services.html" class="btn btn-primary btn-lg">View All Courses</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="section why-section parallax-section" id="why-us">
+    <div class="parallax-bg-layer" id="whyParallax">
+      <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?q=80&w=2070&auto=format&fit=crop" alt="Road background" loading="lazy"/>
+    </div>
+    <div class="parallax-overlay"></div>
+    <div class="container">
+      <div class="section-header light">
+        <span class="section-tag-light gsap-reveal-up">Why Choose Us?</span>
+        <h2 class="gsap-reveal-up" style="color:white">Reasons To Drive With <span class="text-yellow">Kaya</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card gsap-reveal-card">
+          <div class="why-icon"><i data-lucide="shield-check"></i></div>
+          <h3>Safety First</h3>
+          <p>All our vehicles have dual controls and are ANCAP 5-star safety rated. Your safety is our top priority on every lesson.</p>
+        </div>
+        <div class="why-card gsap-reveal-card" style="transition-delay:0.1s">
+          <div class="why-icon"><i data-lucide="users"></i></div>
+          <h3>Expert Instructors</h3>
+          <p>All instructors are SDERA certified with background checks, ensuring you learn from the absolute best professionals.</p>
+        </div>
+        <div class="why-card gsap-reveal-card" style="transition-delay:0.2s">
+          <div class="why-icon"><i data-lucide="clock"></i></div>
+          <h3>Flexible Scheduling</h3>
+          <p>Morning, afternoon, evening, weekends — we work around your busy lifestyle to fit lessons at your convenience.</p>
+        </div>
+        <div class="why-card gsap-reveal-card" style="transition-delay:0.3s">
+          <div class="why-icon"><i data-lucide="map-pin"></i></div>
+          <h3>Doorstep Pickup</h3>
+          <p>We pick you up and drop you home. No need to arrange extra transport — we come right to your address in Canberra.</p>
+        </div>
+        <div class="why-card gsap-reveal-card" style="transition-delay:0.4s">
+          <div class="why-icon"><i data-lucide="trending-up"></i></div>
+          <h3>High Pass Rates</h3>
+          <p>Our 98% first-attempt pass rate speaks for itself. Our structured programs are optimised to get you licensed fast.</p>
+        </div>
+        <div class="why-card gsap-reveal-card" style="transition-delay:0.5s">
+          <div class="why-icon"><i data-lucide="dollar-sign"></i></div>
+          <h3>Affordable Pricing</h3>
+          <p>Competitive, transparent pricing with no hidden fees. Package deals available for maximum savings on your training.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section pricing-section section-alt" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag gsap-reveal-up">Pricing Plans</span>
+        <h2 class="gsap-reveal-up">Simple, Transparent Pricing</h2>
+        <p class="gsap-reveal-up">No hidden fees. Choose the plan that fits your learning journey.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card gsap-reveal-card">
+          <div class="pricing-header-block">
+            <span class="pricing-type">Automatic</span>
+            <div class="pricing-amount"><span class="currency">$</span>75<span class="per-hr">/hr</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i data-lucide="check"></i> 1-Hour Lesson</li>
+            <li><i data-lucide="check"></i> Dual-Control Automatic Car</li>
+            <li><i data-lucide="check"></i> Door-to-Door Service</li>
+            <li><i data-lucide="check"></i> Progress Report After Each Lesson</li>
+            <li><i data-lucide="check"></i> Flexible Rescheduling</li>
+          </ul>
+          <a href="contact.html#booking" class="btn btn-outline-yellow">Book Automatic</a>
+        </div>
+
+        <div class="pricing-card pricing-featured gsap-reveal-card" style="transition-delay:0.15s">
+          <div class="popular-badge">Most Popular</div>
+          <div class="pricing-header-block">
+            <span class="pricing-type">Manual</span>
+            <div class="pricing-amount"><span class="currency">$</span>80<span class="per-hr">/hr</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i data-lucide="check"></i> 1-Hour Lesson</li>
+            <li><i data-lucide="check"></i> Modern Manual Dual-Control Car</li>
+            <li><i data-lucide="check"></i> Door-to-Door Service</li>
+            <li><i data-lucide="check"></i> Clutch &amp; Gear Mastery Training</li>
+            <li><i data-lucide="check"></i> Free Test Route Walkthrough</li>
+          </ul>
+          <a href="contact.html#booking" class="btn btn-primary">Book Manual</a>
+        </div>
+
+        <div class="pricing-card gsap-reveal-card" style="transition-delay:0.3s">
+          <div class="pricing-header-block">
+            <span class="pricing-type">10-Lesson Pack</span>
+            <div class="pricing-amount"><span class="currency">$</span>680<span class="per-hr">/pack</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i data-lucide="check"></i> 10 Hours Total</li>
+            <li><i data-lucide="check"></i> Auto or Manual (you choose)</li>
+            <li><i data-lucide="check"></i> Save $70 vs. Casual Rate</li>
+            <li><i data-lucide="check"></i> Free Hazard Perception Prep</li>
+            <li><i data-lucide="check"></i> Priority Booking Access</li>
+          </ul>
+          <a href="contact.html#booking" class="btn btn-outline-yellow">Book Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+    </div>
+  </section>
+
+  <!-- ===== BLOG SECTION ===== -->
+  <section class="section blog-section section-alt" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag gsap-reveal-up">Latest News</span>
+        <h2 class="gsap-reveal-up">Driving Tips & <span class="text-yellow">Guides</span></h2>
+        <p class="gsap-reveal-up">Stay updated with the latest road safety tips and Canberra driving news.</p>
+      </div>
+      <div class="blog-grid">
+        <!-- Post 1 -->
+        <article class="blog-card gsap-reveal-card">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="5 Tips for First-Time Drivers" loading="lazy"/>
+            <div class="blog-date">May 10, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>5 Essential Tips for First-Time Driving Test</h3>
+            <p>Mastering your nerves and knowing what to expect is half the battle. Discover our top tips for passing your Canberra driving test.</p>
+            <a href="blog.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="blog-card gsap-reveal-card" style="transition-delay:0.15s">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=800&auto=format&fit=crop" alt="Manual vs Automatic" loading="lazy"/>
+            <div class="blog-date">May 08, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>Manual vs. Automatic: Which is Right for You?</h3>
+            <p>We weigh up the pros and cons of both transmissions to help you decide which licence type fits your future driving needs.</p>
+            <a href="blog.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="blog-card gsap-reveal-card" style="transition-delay:0.3s">
+          <div class="blog-img">
+            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop" alt="Night Driving Safety" loading="lazy"/>
+            <div class="blog-date">May 05, 2024</div>
+          </div>
+          <div class="blog-body">
+            <h3>Navigating Night Driving in Canberra</h3>
+            <p>Night driving presents unique challenges. Learn how to stay safe and confident when the sun goes down on ACT roads.</p>
+            <a href="blog.html" class="blog-link">Read More <i data-lucide="arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="text-center" style="margin-top:3rem">
+        <a href="blog.html" class="btn btn-primary btn-lg">View All Posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag gsap-reveal-up">Testimonials</span>
+        <h2 class="gsap-reveal-up">What Our Students Say</h2>
+      </div>
+      <div class="testimonial-slider-wrapper">
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-card">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Kaya Driving School was absolutely amazing! My instructor was so patient and calm, which helped me overcome my anxiety. I passed my driving test on the first try!"</p>
+            <div class="t-author">
+              <div class="t-avatar">SR</div>
+              <div>
+                <strong>Sarah R.</strong>
+                <span>Belconnen, Canberra</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"I was a nervous beginner but after just a few lessons I was driving confidently on the highway. The instructors truly care about making you a safe driver — not just passing a test."</p>
+            <div class="t-author">
+              <div class="t-avatar">JM</div>
+              <div>
+                <strong>James M.</strong>
+                <span>Woden, Canberra</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Best driving school in Canberra! The door-to-door pick up was so convenient for me and the online booking system is super easy to use. Highly recommend to everyone!"</p>
+            <div class="t-author">
+              <div class="t-avatar">PK</div>
+              <div>
+                <strong>Priya K.</strong>
+                <span>Tuggeranong, Canberra</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"After failing my test twice with another school, I switched to Kaya. My new instructor identified exactly what I was doing wrong and fixed it within just 3 lessons. Passed first try!"</p>
+            <div class="t-author">
+              <div class="t-avatar">AL</div>
+              <div>
+                <strong>Ahmed L.</strong>
+                <span>Gungahlin, Canberra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextBtn" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-section parallax-section" id="cta">
+    <div class="parallax-bg-layer" id="ctaParallax">
+      <img src="https://images.unsplash.com/photo-1484291217422-5a17eb9f1a48?q=80&w=2070&auto=format&fit=crop" alt="Canberra road" loading="lazy"/>
+    </div>
+    <div class="parallax-overlay cta-overlay"></div>
+    <div class="container cta-inner">
+      <div class="gsap-reveal-up">
+        <h2 style="color:white;">Ready to Start Your <span class="text-yellow">Driving Journey?</span></h2>
+        <p style="color:rgba(255,255,255,0.85);font-size:1.125rem;margin-bottom:2rem">Book your free trial lesson today. No experience required — just the desire to learn!</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+          <a href="contact.html#booking" class="btn btn-primary btn-lg">Book Your Free Trial</a>
+          <a href="tel:0212345678" class="btn btn-outline-white btn-lg"><i data-lucide="phone"></i> (02) 1234 5678</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo footer-logo" aria-label="Kaya Driving School">
+            <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+            <span class="logo-text-fallback" style="display:none;color:white">Kaya <span class="logo-accent">Driving</span></span>
+          </a>
+          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and skilled driver.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Courses</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Courses</h4>
+          <ul>
+            <li><a href="services.html#automatic">Automatic Lessons</a></li>
+            <li><a href="services.html#manual">Manual Lessons</a></li>
+            <li><a href="services.html#test-prep">Test Preparation</a></li>
+            <li><a href="services.html#refresher">Refresher Course</a></li>
+            <li><a href="services.html">10-Lesson Packages</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h4>Contact Info</h4>
+          <div class="contact-info-item">
+            <i data-lucide="map-pin"></i>
+            <span>Canberra, ACT 2600, Australia</span>
+          </div>
+          <div class="contact-info-item">
+            <i data-lucide="phone"></i>
+            <a href="tel:0212345678">(02) 1234 5678</a>
+          </div>
+          <div class="contact-info-item">
+            <i data-lucide="mail"></i>
+            <a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a>
+          </div>
+          <div class="contact-info-item">
+            <i data-lucide="clock"></i>
+            <span>Mon–Sun: 6:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>

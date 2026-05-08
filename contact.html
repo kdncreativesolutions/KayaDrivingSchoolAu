@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Kaya Driving School in Canberra. Book a lesson, ask a question, or get a free consultation. Phone, email, or online booking available."/>
+  <meta name="keywords" content="contact Kaya Driving School, book driving lesson Canberra, driving school phone number ACT"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://kayadrivingschool.com.au/contact"/>
+  <title>Contact & Book a Lesson | Kaya Driving School Canberra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+    .contact-info-cards { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-info-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      transition: all var(--transition);
+    }
+    .contact-info-card:hover { box-shadow: var(--shadow-md); border-color: var(--yellow); transform: translateX(4px); }
+    .cci-icon {
+      width: 52px; height: 52px;
+      background: var(--yellow-muted);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .cci-icon svg { width: 22px; color: var(--yellow-dark); }
+    .cci-text h4 { margin-bottom: 0.25rem; font-size: 1rem; }
+    .cci-text p, .cci-text a { color: var(--text-body); font-size: 0.9rem; margin: 0; }
+    .cci-text a:hover { color: var(--yellow-dark); }
+
+    .booking-form {
+      background: white;
+      border-radius: var(--radius);
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-heading);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-heading);
+      background: var(--bg-alt);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--yellow);
+      box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.15);
+      background: white;
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-success {
+      display: none;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      text-align: center;
+      color: #15803d;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-section { background: var(--bg-alt); }
+    .map-wrapper {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 420px;
+    }
+    .map-wrapper iframe { width: 100%; height: 100%; border: none; }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .booking-form { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <span class="logo-text-fallback">Kaya <span class="logo-accent">Driving</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#booking" class="btn btn-primary header-cta">Book a Lesson</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#booking" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center">Book a Lesson</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-tag gsap-reveal-up">Get In Touch</span>
+      <h1 class="gsap-reveal-up">Contact <span class="text-yellow">Kaya</span> Driving School</h1>
+      <p class="gsap-reveal-up">Have a question or ready to book? We'd love to hear from you. Our friendly team is available 7 days a week.</p>
+      <div class="breadcrumb gsap-reveal-up">
+        <a href="index.html">Home</a> <span>›</span> <span>Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="booking">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info Cards -->
+        <div class="contact-info-cards">
+          <h2 class="gsap-reveal-up" style="margin-bottom:0.5rem">Let's Get You <span class="text-yellow">Behind the Wheel</span></h2>
+          <p class="gsap-reveal-up" style="margin-bottom:2rem">Fill out the booking form or reach us directly through any of the channels below. We respond within 2 hours during business hours.</p>
+
+          <div class="contact-info-card gsap-reveal-card">
+            <div class="cci-icon"><i data-lucide="phone"></i></div>
+            <div class="cci-text">
+              <h4>Phone</h4>
+              <a href="tel:0212345678">(02) 1234 5678</a>
+              <p>Monday – Sunday, 6:00 AM – 8:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-info-card gsap-reveal-card" style="transition-delay:0.1s">
+            <div class="cci-icon"><i data-lucide="mail"></i></div>
+            <div class="cci-text">
+              <h4>Email</h4>
+              <a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a>
+              <p>We reply within 2 business hours</p>
+            </div>
+          </div>
+          <div class="contact-info-card gsap-reveal-card" style="transition-delay:0.2s">
+            <div class="cci-icon"><i data-lucide="map-pin"></i></div>
+            <div class="cci-text">
+              <h4>Service Area</h4>
+              <p>All suburbs across Canberra, ACT including Belconnen, Woden, Tuggeranong, Gungahlin & City</p>
+            </div>
+          </div>
+          <div class="contact-info-card gsap-reveal-card" style="transition-delay:0.3s">
+            <div class="cci-icon"><i data-lucide="clock"></i></div>
+            <div class="cci-text">
+              <h4>Operating Hours</h4>
+              <p>Monday – Sunday: 6:00 AM – 8:00 PM<br/>Public Holidays: 7:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-info-card gsap-reveal-card" style="transition-delay:0.4s">
+            <div class="cci-icon"><i data-lucide="message-circle"></i></div>
+            <div class="cci-text">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/61212345678" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              <p>Quick responses during lesson hours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="booking-form gsap-reveal-right" id="bookingForm">
+          <h3 style="margin-bottom:0.5rem">Book Your Lesson</h3>
+          <p style="color:var(--text-muted);margin-bottom:2rem;font-size:0.9rem">Fill out the form below and we'll confirm your booking within 2 hours.</p>
+
+          <div class="form-success" id="formSuccess">
+            <i data-lucide="check-circle-2" style="margin-right:8px"></i>
+            Thank you! Your booking request has been received. We'll be in touch within 2 hours.
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="e.g. John" required/>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="e.g. Smith" required/>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required/>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="04XX XXX XXX" required/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="course">Course Interested In *</label>
+              <select id="course" name="course" required>
+                <option value="">Select a course...</option>
+                <option>Beginner Lessons (Automatic)</option>
+                <option>Beginner Lessons (Manual)</option>
+                <option>Automatic Driving</option>
+                <option>Manual Driving</option>
+                <option>Test Preparation</option>
+                <option>Refresher Course</option>
+                <option>10-Lesson Package</option>
+                <option>Advanced Highway</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="preferredDate">Preferred Start Date</label>
+                <input type="date" id="preferredDate" name="preferredDate"/>
+              </div>
+              <div class="form-group">
+                <label for="preferredTime">Preferred Time</label>
+                <select id="preferredTime" name="preferredTime">
+                  <option value="">Any time</option>
+                  <option>Morning (6AM – 12PM)</option>
+                  <option>Afternoon (12PM – 5PM)</option>
+                  <option>Evening (5PM – 8PM)</option>
+                  <option>Weekend only</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="suburb">Your Suburb (for pickup)</label>
+              <input type="text" id="suburb" name="suburb" placeholder="e.g. Belconnen, Gungahlin, Woden..."/>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Message or Questions</label>
+              <textarea id="message" name="message" placeholder="Anything else you'd like us to know..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;padding:1rem">
+              <i data-lucide="send"></i> Submit Booking Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="section map-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2rem">
+        <span class="section-tag gsap-reveal-up">Service Area</span>
+        <h2 class="gsap-reveal-up">We Serve All of <span class="text-yellow">Canberra</span></h2>
+        <p class="gsap-reveal-up">From Gungahlin in the north to Tuggeranong in the south, we pick you up from your home or workplace.</p>
+      </div>
+      <div class="map-wrapper gsap-reveal-up">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104453.05043831261!2d148.99982479619977!3d-35.28345789694748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b164d69b05c9021%3A0x500ea6ea7695660!2sCanberra%20ACT!5e0!3m2!1sen!2sau!4v1715000000000&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off"
+          title="Kaya Driving School Service Area - Canberra ACT"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag gsap-reveal-up">FAQ</span>
+        <h2 class="gsap-reveal-up">Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width:800px;margin:0 auto">
+        <div id="faqContainer"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="logo footer-logo"><img src="assets/logo.png" alt="" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/><span class="logo-text-fallback" style="display:none;color:white">Kaya <span class="logo-accent">Driving</span></span></a>
+          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and skilled driver.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Courses</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Our Courses</h4><ul><li><a href="services.html#automatic">Automatic Lessons</a></li><li><a href="services.html#manual">Manual Lessons</a></li><li><a href="services.html#test-prep">Test Preparation</a></li><li><a href="services.html#refresher">Refresher Course</a></li></ul></div>
+        <div class="footer-col footer-contact"><h4>Contact Info</h4><div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600, Australia</span></div><div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:0212345678">(02) 1234 5678</a></div><div class="contact-info-item"><i data-lucide="mail"></i><a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a></div><div class="contact-info-item"><i data-lucide="clock"></i><span>Mon–Sun: 6:00 AM – 8:00 PM</span></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p></div>
+    </div>
+  </footer>
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i data-lucide="chevron-up"></i></button>
+
+  <script>
+    // ── FAQ Accordion ───────────────────────────────
+    const faqs = [
+      { q: "How do I book a lesson?", a: "Simply fill out the booking form above, call us on (02) 1234 5678, or send us a WhatsApp message. We'll confirm your booking within 2 hours during business hours." },
+      { q: "Do you offer door-to-door pickup?", a: "Yes! We offer door-to-door pickup and drop-off service across all Canberra suburbs including Belconnen, Gungahlin, Woden, Tuggeranong, City, and Queanbeyan." },
+      { q: "What car will I learn in?", a: "We use modern, late-model dual-control vehicles that are safe, comfortable and fitted with all the latest safety technology. We have both automatic and manual vehicles." },
+      { q: "How long does it take to get a licence?", a: "This varies from person to person. On average, most students need between 15–30 hours of professional lessons in conjunction with their log book hours. Our instructors will give you a personalised timeline." },
+      { q: "Can I choose my instructor?", a: "Yes! When booking, you can request a specific instructor. While we do our best to accommodate, availability may vary. All our instructors are equally qualified and fantastic." },
+      { q: "What is your cancellation policy?", a: "We require at least 24 hours notice for cancellations to avoid a cancellation fee. Life happens — if something urgent comes up, just let us know as soon as possible." },
+    ];
+
+    const faqContainer = document.getElementById('faqContainer');
+    if (faqContainer) {
+      faqs.forEach((faq, i) => {
+        const item = document.createElement('div');
+        item.className = 'faq-item';
+        item.style.cssText = 'border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 1rem; overflow: hidden;';
+        item.innerHTML = `
+          <button class="faq-q" aria-expanded="false" style="width:100%;background:white;border:none;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:Poppins,sans-serif;font-size:1rem;font-weight:600;color:var(--text-heading);text-align:left;gap:1rem;transition:background 0.2s">
+            ${faq.q}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;flex-shrink:0;transition:transform 0.3s"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-a" style="display:none;padding:0 1.5rem 1.25rem;color:var(--text-body);font-size:0.95rem;line-height:1.7">${faq.a}</div>
+        `;
+
+        const btn = item.querySelector('.faq-q');
+        const answer = item.querySelector('.faq-a');
+        const icon = btn.querySelector('svg');
+
+        btn.addEventListener('click', () => {
+          const isOpen = answer.style.display === 'block';
+          // Close all
+          document.querySelectorAll('.faq-a').forEach(a => { a.style.display = 'none'; });
+          document.querySelectorAll('.faq-q svg').forEach(ic => { ic.style.transform = ''; });
+          document.querySelectorAll('.faq-q').forEach(q => { q.style.background = 'white'; q.setAttribute('aria-expanded', 'false'); });
+          // Open clicked if it was closed
+          if (!isOpen) {
+            answer.style.display = 'block';
+            icon.style.transform = 'rotate(180deg)';
+            btn.style.background = 'var(--yellow-muted)';
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        faqContainer.appendChild(item);
+      });
+    }
+
+    // ── Form submission handler ───────────────────
+    const form = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // In production this would POST to a server
+        if (formSuccess) {
+          formSuccess.style.display = 'block';
+          form.reset();
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (window.lucide) lucide.createIcons();
+        }
+      });
+    }
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
