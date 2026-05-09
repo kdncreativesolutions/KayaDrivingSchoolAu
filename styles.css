@@ -231,6 +231,57 @@ p {
   transform: translateY(-3px);
 }
 
+/* Phone Button specific style */
+.btn-phone {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.btn-phone:hover {
+  background: var(--yellow);
+  color: var(--text-heading);
+  border-color: var(--yellow);
+  transform: translateY(-3px);
+}
+
+.btn-phone i,
+.btn-phone svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Learn More Button specific style */
+.btn-learn-more {
+  background: transparent;
+  color: #111111;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-learn-more:hover {
+  background: white;
+  color: var(--text-heading);
+  transform: translateY(-3px);
+}
+
+.btn-learn-more i,
+.btn-learn-more svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ---------- HEADER ---------- */
 .header {
   position: fixed;
@@ -1526,16 +1577,39 @@ p {
 }
 
 .social-link svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   color: #ffffff !important;
-  stroke: #ffffff !important;
-  fill: #ffffff !important;
-  /* Ensure icons like Facebook/Instagram fill correctly */
+  stroke: #ffffff;
+  fill: none;
   stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
 }
 
-/* Ensure the icon's internal shapes don't fill if they are meant to be strokes (for Lucide compatibility) */
+/* Facebook: Solid fill for the logo mark */
+.social-link[aria-label="Facebook"] svg path {
+  fill: #ffffff !important;
+  stroke: none;
+}
+
+/* Instagram: Outline only to preserve the 'lens' look */
+.social-link[aria-label="Instagram"] svg * {
+  fill: none !important;
+}
+
+/* YouTube: Outline for the screen, fill for the play triangle */
+.social-link[aria-label="YouTube"] svg path {
+  fill: none !important;
+}
+
+.social-link[aria-label="YouTube"] svg polygon {
+  fill: #ffffff !important;
+  stroke: none;
+}
+
+/* Lucide compatibility */
 .social-link svg[data-lucide] {
   fill: none !important;
 }
