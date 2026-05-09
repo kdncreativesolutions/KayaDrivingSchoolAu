@@ -36,7 +36,12 @@
   padding: 0;
 }
 
-html {
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -45,7 +50,6 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-body);
   line-height: 1.7;
-  overflow-x: hidden;
 }
 
 img {
@@ -304,9 +308,9 @@ p {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding: 0 5%;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 0 40px;
+  /* Wider padding like in the screenshot */
+  width: 100%;
 }
 
 /* Logo */
@@ -348,7 +352,7 @@ p {
 
 
 .logo-accent {
-  color: var(--yellow-dark);
+  color: var(--yellow);
 }
 
 .logo-text-fallback {
@@ -358,10 +362,16 @@ p {
 }
 
 /* Nav */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 1rem;
 }
 
 .nav-link {
@@ -500,19 +510,21 @@ p {
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  padding-top: var(--header-height);
+  /* Removed padding-top to allow transparent header overlap */
+  background-color: var(--bg-primary);
 }
 
 .hero-parallax-bg {
   position: absolute;
   top: -20%;
-  left: 0;
-  right: 0;
+  left: -5%;
+  right: -5%;
   bottom: -20%;
   z-index: 0;
   will-change: transform;
@@ -530,18 +542,19 @@ p {
   inset: 0;
   background: linear-gradient(100deg,
       rgba(255, 255, 255, 0.97) 0%,
-      rgba(255, 255, 255, 0.90) 40%,
-      rgba(255, 255, 255, 0.4) 70%,
-      rgba(255, 255, 255, 0.05) 100%);
+      rgba(255, 255, 255, 0.90) 20%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.05) 60%);
   z-index: 1;
 }
 
 .hero-container {
   position: relative;
   z-index: 2;
-  padding-top: 4rem;
+  padding-top: calc(var(--header-height) + 2rem);
   padding-bottom: 2rem;
   margin-left: 0;
+  width: 100%;
   max-width: 1400px;
 }
 
@@ -566,6 +579,8 @@ p {
 .hero-title {
   margin-bottom: 1.25rem;
   line-height: 1.1;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  /* Larger title like in screenshot */
 }
 
 .hero-desc {

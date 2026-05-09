@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Manual vs. Automatic: Which is right for you? Compare the pros and cons of learning to drive in each vehicle type."/>
-  <title>Manual vs. Automatic: Which is Right for You? | Kaya Driving School</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Manual vs. Automatic: Which is right for you? Compare the pros and cons of learning to drive in each vehicle type." />
+  <title>Manual vs. Automatic: Which is Right for You? | KAYA Driving School</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    .blog-post-img { width: 100%; height: 450px; object-fit: cover; border-radius: var(--radius); margin-bottom: 3rem; }
-    .blog-content h2 { margin-top: 2.5rem; margin-bottom: 1.25rem; color: var(--text-heading); }
-    .blog-content p { margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--text-body); }
-    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; }
-    .comp-item { background: var(--bg-alt); padding: 2rem; border-radius: var(--radius); }
-    .comp-item h3 { color: var(--yellow-dark); margin-bottom: 1rem; text-align: center; }
-    .comp-list { list-style: none; padding: 0; }
-    .comp-list li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
-    .comp-list li::before { content: '✓'; position: absolute; left: 0; color: var(--yellow-dark); font-weight: bold; }
-    @media (max-width: 768px) { .comparison-grid { grid-template-columns: 1fr; } }
+    .blog-post-img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin-bottom: 3rem;
+    }
+
+    .blog-content h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-heading);
+    }
+
+    .blog-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-body);
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .comp-item {
+      background: var(--bg-alt);
+      padding: 2rem;
+      border-radius: var(--radius);
+    }
+
+    .comp-item h3 {
+      color: var(--yellow-dark);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .comp-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .comp-list li {
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .comp-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--yellow-dark);
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header class="header scrolled" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <img src="assets/logo.png" alt="KAYA Driving School Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
         <span class="logo-text-fallback"><span class="logo-accent">Driving School</span></span>
       </a>
       <nav class="nav" id="nav">
@@ -42,27 +102,34 @@
         </ul>
       </nav>
       <a href="contact.html#booking" class="btn btn-primary header-cta">Book a Lesson</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <section class="page-hero">
     <div class="container">
       <div class="breadcrumb gsap-reveal-up" style="justify-content: center; margin-bottom: 1rem;">
-        <a href="index.html">Home</a> <span>›</span> <a href="blog.html">Blog</a> <span>›</span> <span>Manual vs Auto</span>
+        <a href="index.html">Home</a> <span>›</span> <a href="blog.html">Blog</a> <span>›</span> <span>Manual vs
+          Auto</span>
       </div>
       <span class="section-tag gsap-reveal-up">Car Choice</span>
-      <h1 class="gsap-reveal-up" style="max-width: 850px; margin: 0 auto;">Manual vs. Automatic: <span class="text-yellow">Which</span> is Right for You?</h1>
-      <p class="gsap-reveal-up">Deciding between a manual or automatic licence is a major first step in your driving journey.</p>
+      <h1 class="gsap-reveal-up" style="max-width: 850px; margin: 0 auto;">Manual vs. Automatic: <span
+          class="text-yellow">Which</span> is Right for You?</h1>
+      <p class="gsap-reveal-up">Deciding between a manual or automatic licence is a major first step in your driving
+        journey.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container" style="max-width: 850px; margin: 0 auto;">
-      <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1200&auto=format&fit=crop" alt="Manual vs Automatic Gearbox" class="blog-post-img gsap-reveal-up" loading="lazy"/>
-      
+      <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1200&auto=format&fit=crop"
+        alt="Manual vs Automatic Gearbox" class="blog-post-img gsap-reveal-up" loading="lazy" />
+
       <div class="blog-content gsap-reveal-up">
-        <p>One of the most frequent questions we get from new students at Kaya Driving School is: "Should I learn in a manual or an automatic car?" While automatic vehicles are becoming the standard in Australia, manual driving remains a valuable skill. Let's break down the differences to help you choose.</p>
+        <p>One of the most frequent questions we get from new students at KAYA Driving School is: "Should I learn in a
+          manual or an automatic car?" While automatic vehicles are becoming the standard in Australia, manual driving
+          remains a valuable skill. Let's break down the differences to help you choose.</p>
 
         <div class="comparison-grid">
           <div class="comp-item">
@@ -86,14 +153,21 @@
         </div>
 
         <h2>Why Most Students Choose Automatic</h2>
-        <p>In Canberra's traffic, automatic cars offer a smoother and more relaxed learning experience. Since you don't have to worry about the clutch and gear changes, you can focus 100% of your attention on road rules, hazard perception, and safe lane positioning. This often leads to passing the test in fewer lessons.</p>
+        <p>In Canberra's traffic, automatic cars offer a smoother and more relaxed learning experience. Since you don't
+          have to worry about the clutch and gear changes, you can focus 100% of your attention on road rules, hazard
+          perception, and safe lane positioning. This often leads to passing the test in fewer lessons.</p>
 
         <h2>The Case for Manual</h2>
-        <p>If you're planning to work in trades, emergency services, or simply love the "feel" of driving, a manual licence is a great asset. Keep in mind that in the ACT, if you pass your test in an automatic car, your licence will be restricted to automatics only for a certain period. Passing in a manual car gives you the freedom to drive any passenger vehicle.</p>
+        <p>If you're planning to work in trades, emergency services, or simply love the "feel" of driving, a manual
+          licence is a great asset. Keep in mind that in the ACT, if you pass your test in an automatic car, your
+          licence will be restricted to automatics only for a certain period. Passing in a manual car gives you the
+          freedom to drive any passenger vehicle.</p>
 
         <h2>Our Recommendation</h2>
-        <p>At KAYA, we primarily focus on **Automatic lessons** using modern, dual-control vehicles. We find that for most modern learners, the ease and safety of an automatic vehicle provide the best pathway to becoming a confident driver quickly.</p>
-        
+        <p>At KAYA, we primarily focus on **Automatic lessons** using modern, dual-control vehicles. We find that for
+          most modern learners, the ease and safety of an automatic vehicle provide the best pathway to becoming a
+          confident driver quickly.</p>
+
         <div style="margin-top: 3rem; text-align: center;">
           <a href="contact.html#booking" class="btn btn-primary">Start Your Automatic Lessons</a>
         </div>
@@ -106,29 +180,70 @@
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <a href="index.html" class="logo footer-logo">
-            <img src="assets/logo.png" alt="" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
-            <span class="logo-text-fallback" style="display:none;color:white"><span class="logo-accent">Driving School</span></span>
+            <img src="assets/logo.png" alt="" class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <span class="logo-text-fallback" style="display:none;color:white"><span class="logo-accent">Driving
+                School</span></span>
           </a>
-          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and skilled driver.</p>
+          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and
+            skilled driver.</p>
           <div class="social-links">
-            <a href="https://www.facebook.com/share/1CsbU75MbM/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <a href="https://www.facebook.com/share/1CsbU75MbM/" class="social-link" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
             </a>
-            <a href="https://www.instagram.com/kayadrivingschool?igsh=Ymh5NDc4amoybjkz" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/KAYAdrivingschool?igsh=Ymh5NDc4amoybjkz" class="social-link"
+              aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
             </a>
             <a href="#" class="social-link" aria-label="YouTube">
-              <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+              </svg>
             </a>
           </div>
         </div>
-        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Our Courses</h4><ul><li><a href="services.html#automatic">Automatic Lessons</a></li><li><a href="services.html#test-prep">Test Preparation</a></li><li><a href="services.html#refresher">Refresher Course</a></li><li><a href="services.html#conversion">Licence Conversion</a></li></ul></div>
-        <div class="footer-col footer-contact"><h4>Contact Info</h4><div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600</span></div><div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:+61489228702">+61 489 228 702</a></div><div class="contact-info-item"><i data-lucide="mail"></i><a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a></div></div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html#automatic">Automatic Lessons</a></li>
+            <li><a href="services.html#test-prep">Test Preparation</a></li>
+            <li><a href="services.html#refresher">Refresher Course</a></li>
+            <li><a href="services.html#conversion">Licence Conversion</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact Info</h4>
+          <div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600</span></div>
+          <div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:+61489228702">+61 489 228 702</a></div>
+          <div class="contact-info-item"><i data-lucide="mail"></i><a
+              href="mailto:info@KAYAdriving.com.au">info@KAYAdriving.com.au</a></div>
+        </div>
       </div>
-      <div class="footer-bottom"><p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved.</p></div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> KAYA Driving School. All rights reserved.</p>
+      </div>
     </div>
   </footer>
   <script src="main.js"></script>
 </body>
+
 </html>

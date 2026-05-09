@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn about Kaya Driving School in Canberra. Meet our certified instructors, discover our story, and see why thousands trust us for their driving education."/>
-  <meta name="keywords" content="about Kaya Driving School, Canberra driving instructors, certified driving school ACT"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://kayadrivingschool.com.au/about"/>
-  <title>About Us | Kaya Driving School Canberra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Learn about KAYA Driving School in Canberra. Meet our certified instructors, discover our story, and see why thousands trust us for their driving education." />
+  <meta name="keywords"
+    content="about KAYA Driving School, Canberra driving instructors, certified driving school ACT" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://KAYAdrivingschool.com.au/about" />
+  <title>About Us | KAYA Driving School Canberra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
     .value-card {
       background: white;
       border-radius: var(--radius);
@@ -26,16 +36,35 @@
       transition: all var(--transition);
       box-shadow: var(--shadow-sm);
     }
-    .value-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--yellow); }
+
+    .value-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--yellow);
+    }
+
     .value-icon {
-      width: 70px; height: 70px;
+      width: 70px;
+      height: 70px;
       background: var(--yellow-muted);
       border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto 1.5rem;
     }
-    .value-icon svg { width: 30px; color: var(--yellow-dark); }
-    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+    .value-icon svg {
+      width: 30px;
+      color: var(--yellow-dark);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
     .team-card {
       background: white;
       border-radius: var(--radius);
@@ -45,52 +74,135 @@
       text-align: center;
       transition: all var(--transition);
     }
-    .team-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--yellow); }
-    .team-img { height: 280px; overflow: hidden; position: relative; }
-    .team-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-    .team-card:hover .team-img img { transform: scale(1.05); }
-    .team-social {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(250,204,21,0.95), transparent);
-      padding: 2rem 1rem 1rem;
-      display: flex; justify-content: center; gap: 10px;
-      transform: translateY(100%); transition: transform 0.3s ease;
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--yellow);
     }
-    .team-card:hover .team-social { transform: translateY(0); }
+
+    .team-img {
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover .team-img img {
+      transform: scale(1.05);
+    }
+
+    .team-social {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(250, 204, 21, 0.95), transparent);
+      padding: 2rem 1rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .team-card:hover .team-social {
+      transform: translateY(0);
+    }
+
     .team-social a {
-      width: 34px; height: 34px;
-      background: white; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--text-heading);
       transition: background var(--transition);
     }
-    .team-social a:hover { background: var(--yellow); }
-    .team-social a svg { width: 15px; }
-    .team-info { padding: 1.5rem; }
-    .team-info h3 { margin-bottom: 0.25rem; }
-    .team-role { font-size: 0.85rem; color: var(--yellow-dark); font-weight: 600; }
+
+    .team-social a:hover {
+      background: var(--yellow);
+    }
+
+    .team-social a svg {
+      width: 15px;
+    }
+
+    .team-info {
+      padding: 1.5rem;
+    }
+
+    .team-info h3 {
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-size: 0.85rem;
+      color: var(--yellow-dark);
+      font-weight: 600;
+    }
+
     .stats-strip {
       background: var(--yellow);
       padding: 4rem 0;
     }
-    .stats-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 2rem; }
-    .strip-stat-num { font-size: 3rem; font-weight: 900; color: var(--text-heading); font-family: 'Poppins', sans-serif; }
-    .strip-stat-label { font-weight: 600; color: #444; }
-    @media (max-width: 900px) {
-      .values-grid, .team-grid { grid-template-columns: repeat(2, 1fr); }
-      .stats-strip-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .stats-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      gap: 2rem;
     }
+
+    .strip-stat-num {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--text-heading);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .strip-stat-label {
+      font-weight: 600;
+      color: #444;
+    }
+
+    @media (max-width: 900px) {
+
+      .values-grid,
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 600px) {
-      .values-grid, .team-grid { grid-template-columns: 1fr; }
+
+      .values-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header class="header scrolled" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+        <img src="assets/logo.png" alt="KAYA Driving School Logo" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
         <span class="logo-text-fallback"><span class="logo-accent">Driving School</span></span>
       </a>
       <nav class="nav" id="nav">
@@ -114,7 +226,8 @@
         <li><a href="services.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="contact.html#booking" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center">Book a Lesson</a></li>
+        <li><a href="contact.html#booking" class="btn btn-primary"
+            style="margin-top:1rem;display:block;text-align:center">Book a Lesson</a></li>
       </ul>
     </div>
   </header>
@@ -123,7 +236,7 @@
   <section class="page-hero">
     <div class="container">
       <span class="section-tag gsap-reveal-up">Our Story</span>
-      <h1 class="gsap-reveal-up">About <span class="text-yellow">Kaya</span> Driving School</h1>
+      <h1 class="gsap-reveal-up">About <span class="text-yellow">KAYA</span> Driving School</h1>
       <p class="gsap-reveal-up">Empowering Canberra drivers since 2014 — one lesson at a time.</p>
       <div class="breadcrumb gsap-reveal-up">
         <a href="index.html">Home</a> <span>›</span> <span>About Us</span>
@@ -138,10 +251,12 @@
         <div class="about-images-wrapper">
           <div class="about-img-grid">
             <div class="about-img-box img-main gsap-reveal-left">
-              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" alt="Kaya Driving School founding story" loading="lazy"/>
+              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop"
+                alt="KAYA Driving School founding story" loading="lazy" />
             </div>
             <div class="about-img-box img-secondary gsap-reveal-right">
-              <img src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?q=80&w=800&auto=format&fit=crop" alt="Safe driving training" loading="lazy"/>
+              <img src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?q=80&w=800&auto=format&fit=crop"
+                alt="Safe driving training" loading="lazy" />
             </div>
           </div>
           <div class="floating-badge gsap-float">
@@ -157,10 +272,13 @@
           <span class="section-tag gsap-reveal-up">Our History</span>
           <h2 class="gsap-reveal-up">Founded on a Passion for <span class="text-yellow">Road Safety</span></h2>
           <p class="gsap-reveal-up">
-            Kaya Driving School was established in Canberra, ACT with a simple but powerful vision — to create a driving school where every student feels supported, confident, and equipped with real-world driving skills.
+            KAYA Driving School was established in Canberra, ACT with a simple but powerful vision — to create a driving
+            school where every student feels supported, confident, and equipped with real-world driving skills.
           </p>
           <p class="gsap-reveal-up">
-            Over a decade later, we've helped more than 2,000 Canberra residents earn their licences. Our structured curriculum, patient instructors, and student-first approach set us apart from every other driving school in the ACT.
+            Over a decade later, we've helped more than 2,000 Canberra residents earn their licences. Our structured
+            curriculum, patient instructors, and student-first approach set us apart from every other driving school in
+            the ACT.
           </p>
           <ul class="feature-list gsap-reveal-up">
             <li><i data-lucide="check-circle-2"></i> Established in Canberra, ACT — proudly local</li>
@@ -206,49 +324,57 @@
         <div class="value-card gsap-reveal-card">
           <div class="value-icon"><i data-lucide="shield-check"></i></div>
           <h3>Safety Above All</h3>
-          <p>Every decision we make is guided by a commitment to road safety — for our students, instructors, and the wider Canberra community.</p>
+          <p>Every decision we make is guided by a commitment to road safety — for our students, instructors, and the
+            wider Canberra community.</p>
         </div>
         <div class="value-card gsap-reveal-card" style="transition-delay:0.1s">
           <div class="value-icon"><i data-lucide="heart"></i></div>
           <h3>Student First</h3>
-          <p>We tailor every lesson to the individual learner's skills, anxiety levels, and goals. There is no one-size-fits-all approach here.</p>
+          <p>We tailor every lesson to the individual learner's skills, anxiety levels, and goals. There is no
+            one-size-fits-all approach here.</p>
         </div>
         <div class="value-card gsap-reveal-card" style="transition-delay:0.2s">
           <div class="value-icon"><i data-lucide="award"></i></div>
           <h3>Excellence Driven</h3>
-          <p>We continuously update our training methods and invest in our fleet to deliver a world-class driving education experience.</p>
+          <p>We continuously update our training methods and invest in our fleet to deliver a world-class driving
+            education experience.</p>
         </div>
         <div class="value-card gsap-reveal-card" style="transition-delay:0.3s">
           <div class="value-icon"><i data-lucide="handshake"></i></div>
           <h3>Community Focused</h3>
-          <p>We are proud members of the Canberra community, creating safer roads in our city by producing responsible, skilled drivers.</p>
+          <p>We are proud members of the Canberra community, creating safer roads in our city by producing responsible,
+            skilled drivers.</p>
         </div>
         <div class="value-card gsap-reveal-card" style="transition-delay:0.4s">
           <div class="value-icon"><i data-lucide="lightbulb"></i></div>
           <h3>Continuous Learning</h3>
-          <p>Our instructors undergo regular professional development to stay updated with the latest driving standards and techniques.</p>
+          <p>Our instructors undergo regular professional development to stay updated with the latest driving standards
+            and techniques.</p>
         </div>
         <div class="value-card gsap-reveal-card" style="transition-delay:0.5s">
           <div class="value-icon"><i data-lucide="smile"></i></div>
           <h3>Positive Experience</h3>
-          <p>Learning to drive should be enjoyable. We create a calm, positive, and encouraging environment in every single lesson.</p>
+          <p>Learning to drive should be enjoyable. We create a calm, positive, and encouraging environment in every
+            single lesson.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Meet the Team (Preview) -->
-  <section class="section">
+  <!-- <section class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-tag gsap-reveal-up">The Team</span>
         <h2 class="gsap-reveal-up">Meet Our Lead Instructors</h2>
-        <p class="gsap-reveal-up">Passionate, patient, and professionally certified — our team is the heart of Kaya Driving School.</p>
+        <p class="gsap-reveal-up">Passionate, patient, and professionally certified — our team is the heart of KAYA
+          Driving School.</p>
       </div>
       <div class="team-grid">
         <div class="team-card gsap-reveal-card">
           <div class="team-img">
-            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop" alt="Lead Instructor Mark T." loading="lazy"/>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop"
+              alt="Lead Instructor Mark T." loading="lazy" />
             <div class="team-social">
               <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
               <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
@@ -257,12 +383,14 @@
           <div class="team-info">
             <h3>Mark Thompson</h3>
             <span class="team-role">Senior Driving Instructor</span>
-            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem">15+ years experience. SDERA Level 2 Certified. Specialises in anxious learners.</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem">15+ years experience. SDERA Level 2
+              Certified. Specialises in anxious learners.</p>
           </div>
         </div>
         <div class="team-card gsap-reveal-card" style="transition-delay:0.15s">
           <div class="team-img">
-            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop" alt="Instructor Sarah J." loading="lazy"/>
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=600&auto=format&fit=crop"
+              alt="Instructor Sarah J." loading="lazy" />
             <div class="team-social">
               <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
               <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
@@ -271,12 +399,14 @@
           <div class="team-info">
             <h3>Sarah Johnson</h3>
             <span class="team-role">Automatic Specialist</span>
-            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem">8 years experience. Award-winning instructor. Expert in beginner learners.</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem">8 years experience. Award-winning
+              instructor. Expert in beginner learners.</p>
           </div>
         </div>
         <div class="team-card gsap-reveal-card" style="transition-delay:0.3s">
           <div class="team-img">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="Instructor Raj P." loading="lazy"/>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+              alt="Instructor Raj P." loading="lazy" />
             <div class="team-social">
               <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
               <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
@@ -285,7 +415,8 @@
           <div class="team-info">
             <h3>Raj Patel</h3>
             <span class="team-role">Manual Transmission Expert</span>
-            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem">12 years experience. Fleet trainer and road test preparation specialist.</p>
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem">12 years experience. Fleet trainer
+              and road test preparation specialist.</p>
           </div>
         </div>
       </div>
@@ -296,38 +427,55 @@
   </section>
 
   <!-- CTA -->
-  <section class="cta-section parallax-section" id="cta">
+  <!-- <section class="cta-section parallax-section" id="cta">
     <div class="parallax-bg-layer" id="ctaParallax">
-      <img src="https://images.unsplash.com/photo-1484291217422-5a17eb9f1a48?q=80&w=2070&auto=format&fit=crop" alt="" loading="lazy"/>
+      <img src="https://images.unsplash.com/photo-1484291217422-5a17eb9f1a48?q=80&w=2070&auto=format&fit=crop" alt=""
+        loading="lazy" />
     </div>
     <div class="parallax-overlay cta-overlay"></div>
     <div class="container cta-inner">
       <div class="gsap-reveal-up">
-        <h2 style="color:white;">Ready to Drive with <span class="text-yellow">Kaya?</span></h2>
-        <p style="color:rgba(255,255,255,0.85);font-size:1.125rem;margin-bottom:2rem">Book your free trial lesson today and experience the Kaya difference.</p>
+        <h2 style="color:white;">Ready to Drive with <span class="text-yellow">KAYA?</span></h2>
+        <p style="color:rgba(255,255,255,0.85);font-size:1.125rem;margin-bottom:2rem">Book your free trial lesson today
+          and experience the KAYA difference.</p>
         <a href="contact.html#booking" class="btn btn-primary btn-lg">Book Your Free Trial</a>
       </div>
     </div>
-  </section>
+  </section> --> -->
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <a href="index.html" class="logo footer-logo">
-            <img src="assets/logo.png" alt="Kaya Driving School Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
-            <span class="logo-text-fallback" style="display:none;color:white"><span class="logo-accent">Driving School</span></span>
+            <img src="assets/logo.png" alt="KAYA Driving School Logo" class="logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <span class="logo-text-fallback" style="display:none;color:white"><span class="logo-accent">Driving
+                School</span></span>
           </a>
-          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and skilled driver.</p>
+          <p>Premier driving lessons in Canberra, ACT. We are dedicated to making every student a safe, confident, and
+            skilled driver.</p>
           <div class="social-links">
-            <a href="https://www.facebook.com/share/1CsbU75MbM/" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <a href="https://www.facebook.com/share/1CsbU75MbM/" class="social-link" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
             </a>
-            <a href="https://www.instagram.com/kayadrivingschool?igsh=Ymh5NDc4amoybjkz" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/KAYAdrivingschool?igsh=Ymh5NDc4amoybjkz" class="social-link"
+              aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
             </a>
             <a href="#" class="social-link" aria-label="YouTube">
-              <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+              </svg>
             </a>
           </div>
         </div>
@@ -336,13 +484,13 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Courses</a></li>
+            <li><a href="services.html">Our Services</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Our Courses</h4>
+          <h4>Our Services</h4>
           <ul>
             <li><a href="services.html#automatic">Automatic Lessons</a></li>
             <li><a href="services.html#manual">Manual Lessons</a></li>
@@ -354,12 +502,13 @@
           <h4>Contact Info</h4>
           <div class="contact-info-item"><i data-lucide="map-pin"></i><span>Canberra, ACT 2600, Australia</span></div>
           <div class="contact-info-item"><i data-lucide="phone"></i><a href="tel:+61489228702">+61 489 228 702</a></div>
-          <div class="contact-info-item"><i data-lucide="mail"></i><a href="mailto:info@kayadriving.com.au">info@kayadriving.com.au</a></div>
+          <div class="contact-info-item"><i data-lucide="mail"></i><a
+              href="mailto:info@KAYAdriving.com.au">info@KAYAdriving.com.au</a></div>
           <div class="contact-info-item"><i data-lucide="clock"></i><span>Mon–Sun: 6:00 AM – 8:00 PM</span></div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="footerYear"></span> Kaya Driving School. All rights reserved.</p>
+        <p>&copy; <span id="footerYear"></span> KAYA Driving School. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -367,4 +516,5 @@
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top"><i data-lucide="chevron-up"></i></button>
   <script src="main.js"></script>
 </body>
+
 </html>
