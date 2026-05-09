@@ -99,19 +99,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Scroll-to-Top Button ───────────────────────
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        scrollTopBtn.classList.add('visible');
-      } else {
-        scrollTopBtn.classList.remove('visible');
-      }
-    }, { passive: true });
+  // ── WhatsApp Popup Toggle ──────────────────────
+  const whatsappToggle = document.getElementById('whatsappToggle');
+  const whatsappPopup = document.getElementById('whatsappPopup');
+  const wpClose = document.getElementById('wpClose');
 
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (whatsappToggle && whatsappPopup) {
+    whatsappToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      whatsappPopup.classList.toggle('active');
+    });
+
+    if (wpClose) {
+      wpClose.addEventListener('click', () => {
+        whatsappPopup.classList.remove('active');
+      });
+    }
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (!whatsappPopup.contains(e.target) && !whatsappToggle.contains(e.target)) {
+        whatsappPopup.classList.remove('active');
+      }
     });
   }
 
@@ -160,48 +169,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Generic reveal-up animations
     gsap.utils.toArray('.gsap-reveal-up').forEach(el => {
-      gsap.to(el, {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 88%',
-          once: true,
+      gsap.fromTo(el, 
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            once: true,
+          }
         }
-      });
+      );
     });
 
     // Reveal from left
     gsap.utils.toArray('.gsap-reveal-left').forEach(el => {
-      gsap.to(el, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%',
-          once: true,
+      gsap.fromTo(el,
+        { opacity: 0, x: -60 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+          }
         }
-      });
+      );
     });
 
     // Reveal from right
     gsap.utils.toArray('.gsap-reveal-right').forEach(el => {
-      gsap.to(el, {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 85%',
-          once: true,
+      gsap.fromTo(el,
+        { opacity: 0, x: 60 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          delay: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            once: true,
+          }
         }
-      });
+      );
     });
 
     // Card reveals (staggered)
@@ -213,19 +231,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     Object.values(cardGroups).forEach(group => {
-      gsap.to(group, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.7,
-        ease: 'power3.out',
-        stagger: 0.12,
-        scrollTrigger: {
-          trigger: group[0],
-          start: 'top 90%',
-          once: true,
+      gsap.fromTo(group,
+        { opacity: 0, y: 40, scale: 0.97 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: group[0],
+            start: 'top 90%',
+            once: true,
+          }
         }
-      });
+      );
     });
 
     // Floating badges animation
