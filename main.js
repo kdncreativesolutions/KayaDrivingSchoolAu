@@ -1,5 +1,5 @@
 /* =============================================
-   MAIN.JS — Kaya Driving School
+   MAIN.JS — KAYA Driving School
    Handles: GSAP Animations, Parallax, Slider,
    Mobile Menu, Header Scroll, Lucide Icons
    ============================================= */
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    
+
     // Dot follows instantly
     cursorDot.style.left = `${mouseX}px`;
     cursorDot.style.top = `${mouseY}px`;
@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function animateCursor() {
     let distX = mouseX - outlineX;
     let distY = mouseY - outlineY;
-    
+
     outlineX = outlineX + (distX * 0.15);
     outlineY = outlineY + (distY * 0.15);
-    
+
     cursorOutline.style.left = `${outlineX}px`;
     cursorOutline.style.top = `${outlineY}px`;
-    
+
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
