@@ -163,7 +163,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0.8rem 1.8rem;
+  padding: 0.5rem 1.8rem;
   font-weight: 700;
   font-size: 0.95rem;
   border-radius: var(--radius-sm);
@@ -338,24 +338,37 @@ p {
   mix-blend-mode: multiply;
 }
 
-/* Footer logo: hide image and show text because dark background clashes with the light logo circle */
+/* Footer logo: show as a white badge on dark background */
+.footer-logo {
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: var(--radius-sm);
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+}
+
 .footer-logo .logo-img {
-  display: none !important;
+  display: block !important;
+  height: 40px;
+  /* Slightly smaller in footer */
+  mix-blend-mode: multiply;
+  /* Keep white background blend */
 }
 
 .footer-logo .logo-text-fallback {
   display: flex !important;
-  color: white;
-  font-size: 1.4rem;
+  color: var(--text-heading);
+  font-size: 1.2rem;
   font-weight: 800;
   font-family: 'Poppins', sans-serif;
   align-items: center;
-  gap: 4px;
 }
 
-
 .logo-accent {
-  color: var(--yellow);
+  color: var(--yellow-dark);
 }
 
 .logo-text-fallback {
@@ -519,7 +532,8 @@ p {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  padding-top: var(--header-height); /* Offset for always-white fixed header */
+  padding-top: var(--header-height);
+  /* Offset for always-white fixed header */
   background-color: var(--bg-primary);
 }
 
@@ -582,7 +596,7 @@ p {
 .hero-title {
   margin-bottom: 1.25rem;
   line-height: 1.1;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   /* Larger title like in screenshot */
 }
 
@@ -857,7 +871,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin: 1.5rem 0 0; /* Removed bottom margin to align bottom text with image */
+  margin: 1.5rem 0 0;
+  /* Removed bottom margin to align bottom text with image */
 }
 
 .feature-list li {
@@ -1086,7 +1101,8 @@ p {
 .parallax-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 46, 0.93); /* Full shade */
+  background: rgba(26, 26, 46, 0.93);
+  /* Full shade */
   z-index: 1;
 }
 
@@ -1630,6 +1646,48 @@ p {
   stroke: var(--text-heading) !important;
 }
 
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--footer-text);
+  line-height: 1.6;
+}
+
+.footer-bottom a {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--yellow);
+}
+
+.footer-bottom .footer-divider {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 0.5rem;
+}
+
+
+@media (max-width: 600px) {
+  .footer-bottom p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .footer-bottom .footer-divider {
+    display: none;
+  }
+}
+
 /* ---------- WHATSAPP FLOAT ---------- */
 .whatsapp-float {
   position: fixed;
@@ -1786,7 +1844,8 @@ p {
   background: #202c33;
   display: flex;
   justify-content: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* The fixed line divider */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* The fixed line divider */
 }
 
 .wp-btn {
@@ -1966,6 +2025,14 @@ p {
   border: 2px solid rgba(234, 179, 8, 0.5);
   transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
+
+@media (max-width: 1024px) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+}
+
 
 /* ---------- YELLOW STATS BANNER ---------- */
 .yellow-stats-banner {
@@ -2410,4 +2477,14 @@ p {
   #heroBgImg {
     content: url('assets/tablet-hero.png');
   }
+}
+
+/* Fix for white line at bottom of page */
+html {
+  background-color: var(--footer-bg);
+}
+
+.footer {
+  margin-bottom: 0;
+  border-bottom: none;
 }
