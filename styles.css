@@ -2470,12 +2470,30 @@ p {
   /* Responsive Hero Backgrounds */
   #heroBgImg {
     content: url('assets/mobile-hero.png');
+    object-position: 80% top; /* Prioritize the person on the right and their face at the top */
+  }
+
+  .hero-parallax-bg {
+    transform: none !important; /* Disable parallax shift on mobile */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
 @media (max-width: 900px) and (min-width: 481px) {
   #heroBgImg {
     content: url('assets/tablet-hero.png');
+    object-position: 80% top;
+  }
+
+  .hero-parallax-bg {
+    transform: none !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
