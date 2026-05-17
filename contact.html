@@ -265,7 +265,7 @@
             <div class="cci-icon"><i data-lucide="mail"></i></div>
             <div class="cci-text">
               <h4>Email</h4>
-              <p>info@KAYAdriving.com.au</p>
+              <p>kayadriving@gmail.com</p>
               <p>We reply within 2 business hours</p>
             </div>
           </a>
@@ -536,6 +536,130 @@
       </a>
     </div>
   </div>
+
+  <script>
+    // —— FAQ Accordion ——————————————————————————————
+    const faqs = [
+      { q: "1. How do I book driving lessons with KAYA Driving School?", a: "You can book your driving lessons by calling us, sending an email, or using the booking form on our website. We offer flexible lesson times including weekdays, evenings, and weekends." },
+      { q: "2. Do you provide driving lessons in Canberra and surrounding ACT areas?", a: "Yes. We provide professional driving lessons across Canberra and nearby ACT suburbs including Belconnen, Gungahlin, Woden, Tuggeranong, Weston Creek, and Queanbeyan." },
+      { q: "3. Can beginners start lessons with no driving experience?", a: "Absolutely. Our instructors are experienced in teaching complete beginners and helping nervous learners build confidence safely from day one." },
+      { q: "4. What type of vehicles are used for training?", a: "We use modern dual-control automatic vehicles that are safe, comfortable, and ideal for learner drivers preparing for the ACT driving test." },
+      { q: "5. Do you help students prepare for the ACT driving test?", a: "Yes. Our lessons are designed to help learners understand ACT road rules, safe driving habits, parking techniques, roundabouts, lane changes, and everything required to pass the ACT driving assessment confidently." },
+      { q: "6. Can I use your car for the driving test?", a: "Yes. Students can use our instructor vehicle for their ACT driving test, subject to availability and eligibility." },
+      { q: "7. How many driving lessons will I need before taking the test?", a: "The number of lessons depends on your experience, confidence, and learning speed. Some learners require only a few lessons, while beginners may need a structured learning plan over several weeks." },
+      { q: "8. Are your driving instructors accredited in the ACT?", a: "Yes. All our instructors are fully qualified, professional, and accredited to provide driving instruction in the Australian Capital Territory (ACT)." },
+      { q: "9. What should I bring to my first driving lesson?", a: "Please bring your valid learner licence (Learner Permit) and wear comfortable footwear suitable for driving." },
+      { q: "10. Do you teach defensive driving techniques?", a: "Yes. We focus strongly on defensive driving, hazard awareness, safe decision-making, and real-world driving skills to help students become safe and responsible drivers." },
+      { q: "11. What are the speed limits learners should know in Canberra?", a: "Speed limits vary depending on the road and area. Common limits include 40 km/h in school zones, 50 km/h on suburban roads, and 60-100 km/h on major roads. Our instructors ensure you fully understand these." },
+      { q: "12. Are mobile phones allowed while driving in ACT?", a: "No. Learner and provisional drivers in the ACT must not use mobile phones while driving, including hands-free functions. Strict penalties apply for distracted driving." },
+      { q: "13. Do you offer refresher driving lessons?", a: "Yes. We provide refresher lessons for overseas licence holders, nervous drivers, seniors, and anyone wanting to improve confidence or update their driving skills." },
+      { q: "14. What are the most common mistakes during the ACT driving test?", a: "Common mistakes include not checking mirrors regularly, incorrect indication, poor observation at roundabouts, speed control issues, unsafe lane changes, and rolling stops at stop signs." },
+      { q: "15. Why choose KAYA Driving School?", a: "Friendly and patient instructors, flexible schedules, modern vehicles, focus on safe driving habits, and professional ACT test preparation." },
+    ];
+
+    const faqContainer = document.getElementById('faqContainer');
+    if (faqContainer) {
+      faqs.forEach((faq, i) => {
+        const item = document.createElement('div');
+        item.className = 'faq-item';
+        item.innerHTML = `
+          <div class="faq-question">
+            <span>${faq.q}</span>
+            <div class="faq-icon"><i data-lucide="chevron-down"></i></div>
+          </div>
+          <div class="faq-answer">
+            <p>${faq.a}</p>
+          </div>
+        `;
+        faqContainer.appendChild(item);
+      });
+      // Re-init Lucide for new icons
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // —— Form submission handler —————————————————
+    const form = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    if (form) {
+      // Real-time validation removal
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          if (input.classList.contains('invalid')) {
+            if (input.checkValidity()) {
+              input.classList.remove('invalid');
+              const errorMsg = input.nextElementSibling;
+              if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.style.display = 'none';
+              }
+            }
+          }
+        });
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let isValid = true;
+        inputs.forEach(input => {
+          if (input.hasAttribute('required') || input.value !== '') {
+            if (!input.checkValidity()) {
+              isValid = false;
+              input.classList.add('invalid');
+              const errorMsg = input.nextElementSibling;
+              if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.style.display = 'block';
+              }
+            } else {
+              input.classList.remove('invalid');
+              const errorMsg = input.nextElementSibling;
+              if (errorMsg && errorMsg.classList.contains('error-msg')) {
+                errorMsg.style.display = 'none';
+              }
+            }
+          }
+        });
+
+        if (!isValid) {
+          // Scroll to first error
+          const firstError = form.querySelector('.invalid');
+          if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        // In production this would POST to a server
+        if (formSuccess) {
+          formSuccess.style.display = 'block';
+          form.reset();
+          inputs.forEach(input => {
+            input.classList.remove('invalid');
+            const errorMsg = input.nextElementSibling;
+            if (errorMsg && errorMsg.classList.contains('error-msg')) errorMsg.style.display = 'none';
+          });
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (window.lucide) lucide.createIcons();
+        }
+      });
+    }
+
+    // —— Pre-select course from URL ?service= param ——————————
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      const Serviceselect = document.getElementById('course');
+      if (Serviceselect) {
+        const decoded = decodeURIComponent(serviceParam.replace(/\+/g, ' '));
+        const options = Array.from(Serviceselect.options);
+        const match = options.find(opt => opt.text.trim() === decoded.trim());
+        if (match) {
+          match.selected = true;
+          // Trigger yellow focus to show it's set
+          Serviceselect.style.borderColor = 'var(--yellow)';
+          setTimeout(() => { Serviceselect.style.borderColor = ''; }, 2000);
+        }
+      }
+    }
+  </script>
 
   <script src="main.js"></script>
 </body>
