@@ -1682,7 +1682,7 @@ p {
     align-items: center;
     gap: 0.5rem;
   }
-  
+
   .footer-bottom .footer-divider {
     display: none;
   }
@@ -2027,6 +2027,7 @@ p {
 }
 
 @media (max-width: 1024px) {
+
   .cursor-dot,
   .cursor-outline {
     display: none !important;
@@ -2470,11 +2471,13 @@ p {
   /* Responsive Hero Backgrounds */
   #heroBgImg {
     content: url('assets/mobile-hero.png');
-    object-position: 80% top; /* Prioritize the person on the right and their face at the top */
+    object-position: 80% top;
+    /* Prioritize the person on the right and their face at the top */
   }
 
   .hero-parallax-bg {
-    transform: none !important; /* Disable parallax shift on mobile */
+    transform: none !important;
+    /* Disable parallax shift on mobile */
     top: 0;
     bottom: 0;
     left: 0;
