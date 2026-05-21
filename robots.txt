@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kayadrivingschool.com.au/sitemap_index.xml
-Sitemap: https://kayadrivingschool.com.au/sitemap.xml
